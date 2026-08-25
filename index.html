@@ -138,13 +138,12 @@
     <p class="lede">Coffee by day. Wine by night.</p>
     <p class="days"><span id="days">--</span> days to go</p>
     <div class="signup" id="signup">
-      <!-- SIGN-UP FORM
-           Placeholder only. To connect a provider (Mailchimp, Klaviyo, etc.):
-           set the form's action to the provider's POST URL, name the input to match
-           (e.g. EMAIL for Mailchimp) and remove the JS submit handler below. -->
+      <!-- SIGN-UP FORM → Google Sheet via Apps Script.
+           Set SIGNUP_URL in the script at the bottom to the deployed Web app URL. -->
       <form id="form" action="#" method="post" novalidate>
         <label for="email" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Email address</label>
         <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Your email address" required>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
         <button class="btn btn-gold" type="submit">Keep me posted</button>
       </form>
       <p class="note">Opening news and first-look invitations. No spam.</p>
@@ -182,12 +181,19 @@
     document.getElementById('days').textContent = d;
   })();
 
-  // Placeholder submit — replace when the form is connected to a mailing provider
+  // Sign-up → Google Sheet (Apps Script web app). Paste the deployed Web app URL here:
+  var SIGNUP_URL = 'https://script.google.com/macros/s/AKfycbz17u-_AUbBmUHk-gPUCZVjfEha7hW1yWQpVycbq3SHwE0-WaVh9nqv0k6e4cxn3LRt/exec';
+
   document.getElementById('form').addEventListener('submit', function(e){
     e.preventDefault();
-    var input = document.getElementById('email');
+    var form = this, input = document.getElementById('email'), btn = form.querySelector('button');
     if (!input.checkValidity()) { input.reportValidity(); return; }
-    document.getElementById('signup').classList.add('done');
+    if (form.website.value) return; // honeypot: bots fill the hidden field
+    btn.disabled = true; btn.textContent = 'One moment…';
+    var body = new URLSearchParams({ email: input.value.trim(), source: location.hostname });
+    fetch(SIGNUP_URL, { method: 'POST', mode: 'no-cors', body: body })
+      .catch(function(){})
+      .finally(function(){ document.getElementById('signup').classList.add('done'); });
   });
 </script>
 </body>
