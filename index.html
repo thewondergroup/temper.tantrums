@@ -6,6 +6,7 @@
 <title>Temper Tantrums — Café &amp; Wine Bar — Opening 30 September</title>
 <meta name="description" content="Temper Tantrums, a new café and wine bar from the Temper group, opens 30 September 2026. Sign up to be first through the door.">
 <meta property="og:title" content="Temper Tantrums — Opening 30 September">
+<meta property="og:image" content="https://tempertantrums.co.uk/img/paloma-green.jpg">
 <meta property="og:description" content="Café by day. Wine & cocktails by night. Irreverent elegance with a taste for mischief. Sign up for opening news and first-look invitations.">
 <meta name="theme-color" content="#395542">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,14 +108,39 @@
   .foot{position:absolute;left:0;right:0;bottom:1.6rem;display:flex;flex-wrap:wrap;justify-content:center;gap:.3rem 1.8rem;font-family:var(--f-ui);font-size:.8rem;color:rgba(255,255,255,.55);padding:0 1.5rem}
   .foot a{text-decoration:none}
   .foot a:hover{color:var(--gold)}
+  /* ---- Split with photos ---- */
+  .split{display:grid;grid-template-columns:1fr 1fr}
+  .panel{display:grid;grid-template-columns:1fr;align-content:start}
+  .panel img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+  .panel .ptext{padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,4vw,3.5rem)}
+  .panel h2{font-size:clamp(1.2rem,1rem + 1vw,1.7rem);margin:.6rem 0 .9rem}
+  .panel p{max-width:30em;font-size:1.12rem;line-height:1.55}
+  .day{background:var(--pink);color:var(--white)}
+  .day .eyebrow{color:rgba(255,255,255,.85)}
+  .night{background:var(--green-deep);color:var(--white)}
+  .night .eyebrow{color:var(--gold)}
+  @media (max-width:760px){.split{grid-template-columns:1fr}}
+
+  /* ---- Plates gallery ---- */
+  .plates{background:var(--green);padding:clamp(3.5rem,7vw,6rem) 0;text-align:center}
+  .plates .eyebrow{color:var(--pink)}
+  .plates h2{color:var(--white);font-size:clamp(1.2rem,1rem + 1vw,1.7rem);margin:.6rem 0 2.2rem}
+  .plate-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+  .plate-grid figure{margin:0}
+  .plate-grid img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+  .plate-grid figcaption{font-family:var(--f-head);font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:.7rem}
+  @media (max-width:760px){.plate-grid{grid-template-columns:1fr 1fr}}
+
   /* ---- Story ---- */
   .story{background:var(--cream);color:var(--green);padding:clamp(3.5rem,7vw,6rem) 0}
   .story-grid{display:grid;grid-template-columns:auto 1fr;gap:clamp(2rem,6vw,5rem);align-items:center;max-width:960px}
-  .story-mark{width:clamp(90px,12vw,150px);color:var(--gold)}
+  .story-mark{width:clamp(220px,26vw,320px);position:relative}
+  .story-mark img{width:100%;display:block}
+  .story-mark img.over{position:absolute;width:58%;right:-18%;bottom:-14%;box-shadow:0 12px 40px rgba(0,0,0,.18)}
   .story .eyebrow{color:var(--gold);margin-bottom:1rem}
   .story-p{font-size:clamp(1.1rem,1rem + .5vw,1.35rem);line-height:1.55;max-width:32em;margin-bottom:1rem}
   .story-tag{font-style:italic;color:var(--pink);font-size:clamp(1.15rem,1rem + .6vw,1.5rem);margin-top:.4rem}
-  @media (max-width:760px){.story-grid{grid-template-columns:1fr;text-align:center}.story-mark{margin:0 auto}.story-p{margin-inline:auto}}
+  @media (max-width:760px){.story-grid{grid-template-columns:1fr;text-align:center}.story-mark{margin:0 auto 2rem;width:70%}.story-p{margin-inline:auto}}
   /* ---- Footer ---- */
   footer{background:var(--gold);color:var(--white);padding:2.2rem 0 1.4rem;text-align:center}
   .f-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;align-items:start}
@@ -162,14 +188,49 @@
   </div>
 </section>
 
+<section class="split" aria-label="Day and night">
+  <div class="panel day">
+    <img src="img/espresso-pink.jpg" alt="Espresso at Temper Tantrums" loading="lazy">
+    <div class="ptext">
+      <p class="eyebrow">By day</p>
+      <h2>Café</h2>
+      <p>Excellent coffee, fresh pastries and somewhere to settle in. Breakfast into lunch, unhurried.</p>
+    </div>
+  </div>
+  <div class="panel night">
+    <img src="img/paloma-green.jpg" alt="Cocktail with a spiced salt rim" loading="lazy">
+    <div class="ptext">
+      <p class="eyebrow">By night</p>
+      <h2>Wine &amp; Cocktails</h2>
+      <p>Serious wines, exceptional cocktails and playful plates as the lights go down.</p>
+    </div>
+  </div>
+</section>
+
 <section class="story">
   <div class="wrap story-grid">
-    <div class="story-mark"><svg class="icon-story" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="490 200 180 220" fill="currentColor"><defs></defs><path d="M 514.582031 209.695312 C 500.078125 235.960938 498.507812 239.09375 497.332031 248.113281 L 499.292969 248.503906 C 507.917969 226.945312 526.734375 219.105469 529.085938 219.105469 L 559.664062 219.105469 C 564.367188 219.105469 568.679688 223.023438 568.679688 227.726562 L 568.679688 382.570312 C 568.679688 397.074219 567.503906 402.5625 562.796875 409.230469 C 558.09375 410.011719 554.957031 410.402344 552.214844 410.402344 C 548.6875 410.402344 545.160156 410.011719 541.628906 409.230469 L 541.628906 413.929688 C 544.765625 414.714844 546.335938 415.109375 551.039062 415.109375 C 554.566406 415.109375 572.597656 413.929688 576.910156 413.929688 C 577.480469 413.929688 578.058594 413.945312 578.632812 413.953125 L 578.632812 212.039062 C 569.4375 212.273438 561.855469 212.4375 558.09375 212.4375 C 545.941406 212.4375 530.652344 212.4375 514.582031 209.695312 "/><path d="M 648.015625 210.398438 C 638.066406 210.398438 606.308594 211.375 583.898438 211.949219 L 583.898438 413.882812 C 593.085938 414.027344 602.769531 415.027344 610.773438 415.027344 C 614.300781 415.027344 616.261719 415.027344 619.007812 413.851562 L 619.007812 409.148438 C 616.65625 410.324219 615.085938 410.71875 611.949219 410.71875 C 609.992188 410.71875 605.679688 410.324219 602.933594 409.933594 C 598.621094 406.40625 594.703125 401.699219 594.703125 393.078125 L 594.703125 230.390625 C 594.703125 220.199219 599.40625 218.628906 612.34375 218.628906 L 635.863281 218.628906 C 642.132812 218.628906 652.71875 218.628906 652.71875 234.3125 L 652.71875 237.449219 C 651.152344 239.800781 648.40625 244.503906 644.878906 248.425781 C 645.664062 248.816406 646.839844 249.992188 647.625 250.382812 C 658.992188 237.839844 661.34375 226.082031 661.34375 223.726562 C 661.34375 213.535156 655.464844 210.398438 648.015625 210.398438 "/></svg></div>
+    <div class="story-mark">
+      <img src="img/lipstick-green.jpg" alt="Lipstick and a brass lighter" loading="lazy">
+      <img class="over" src="img/napkin-pink.jpg" alt="A phone number scribbled on a napkin" loading="lazy">
+    </div>
     <div class="story-text">
       <p class="eyebrow">What it is</p>
       <p class="story-p">Italian at heart with Asian accents, Temper Tantrums is an all-day neighbourhood spot with a mischievous streak. Excellent coffee and fresh pastries in the morning; serious wines, exceptional cocktails and playful plates after dark.</p>
       <p class="story-p">Set among an eclectic collection of art, objects and curiosities, it&rsquo;s relaxed, effortlessly assured and just a little badly behaved.</p>
       <p class="story-tag">Irreverent elegance with a taste for mischief.</p>
+    </div>
+  </div>
+</section>
+
+<section class="plates">
+  <div class="wrap">
+    <p class="eyebrow">The food</p>
+    <h2>Playful plates</h2>
+    <div class="plate-grid">
+      <figure><img src="img/flatbread.jpg" alt="Flatbread with coppa, pesto and rocket" loading="lazy"><figcaption>Flatbreads</figcaption></figure>
+      <figure><img src="img/coppa.jpg" alt="Coppa with rocket and parmesan" loading="lazy"><figcaption>Charcuterie</figcaption></figure>
+      <figure><img src="img/crisps.jpg" alt="Crisps with prosciutto, cheese and pesto" loading="lazy"><figcaption>Tasting plates</figcaption></figure>
+      <figure><img src="img/tiramisu-dark.jpg" alt="Matcha tiramisu" loading="lazy"><figcaption>Matcha tiramisu</figcaption></figure>
     </div>
   </div>
 </section>
