@@ -40,6 +40,23 @@
   .btn-green:hover{background:var(--green-deep)}
   :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
+  /* ---- Site nav ---- */
+  .nav{position:absolute;inset:0 0 auto 0;z-index:20;padding:1.1rem 0;background:linear-gradient(rgba(0,0,0,.28),transparent)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+  .nav .mark{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+  .nav .mark .icon-t{width:20px;color:var(--gold)}
+  .nav .mark span{font-family:var(--f-head);font-weight:700;letter-spacing:.26em;text-transform:uppercase;font-size:.78rem;color:var(--white)}
+  .nav ul{list-style:none;display:flex;align-items:center;gap:clamp(.9rem,2.6vw,2rem)}
+  .nav ul a{font-family:var(--f-head);font-weight:600;letter-spacing:.22em;text-transform:uppercase;font-size:.64rem;text-decoration:none;color:rgba(255,255,255,.85);padding:.3rem 0}
+  .nav ul a:hover,.nav ul a[aria-current]{color:var(--gold)}
+  .nav .btn{padding:.7rem 1.1rem;font-size:.6rem}
+  .nav.solid{position:static;background:var(--green)}
+  @media (max-width:760px){
+    .nav .wrap{flex-direction:column;gap:.7rem}
+    .nav ul{flex-wrap:wrap;justify-content:center;gap:.7rem 1.1rem}
+    .nav .btn{display:none}
+  }
+
   /* ---- Header ---- */
   header{position:absolute;inset:0 0 auto 0;z-index:5;padding:1.5rem 0}
   header .wrap{display:flex;justify-content:space-between;align-items:center}
@@ -156,22 +173,14 @@
   .no-grid img.wide{aspect-ratio:auto}
   @media (max-width:760px){.no-grid{grid-template-columns:1fr 1fr}.no-grid img.wide{grid-column:1/-1;aspect-ratio:16/10}}
 
-  /* ---- Events enquiry ---- */
-  .events{background:var(--green-deep);color:var(--white);padding:clamp(3.5rem,7vw,6rem) 0;text-align:center}
-  .events .eyebrow{color:var(--pink)}
-  .events h2{font-size:clamp(1.2rem,1rem + 1vw,1.7rem);margin:.6rem 0 .8rem}
-  .events .ev-intro{max-width:34em;margin:0 auto 2rem;font-size:1.1rem;color:rgba(255,255,255,.85)}
-  .ev-form{max-width:640px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:.8rem;text-align:left}
-  .ev-form input,.ev-form textarea{font-family:var(--f-ui);font-size:.95rem;padding:.9rem 1rem;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.06);color:var(--white);border-radius:0;width:100%}
-  .ev-form input::placeholder,.ev-form textarea::placeholder{color:rgba(255,255,255,.6)}
-  .ev-form input:focus,.ev-form textarea:focus{border-color:var(--gold);outline:none;background:rgba(255,255,255,.1)}
-  .ev-form textarea{grid-column:1/-1;min-height:110px;resize:vertical}
-  .ev-form .btn{grid-column:1/-1;justify-self:center;min-width:260px}
-  .ev-thanks{display:none;max-width:520px;margin:0 auto;border:1px solid var(--gold);padding:1.4rem}
-  .ev-thanks strong{font-family:var(--f-head);letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;color:var(--gold);display:block;margin-bottom:.4rem}
-  .events.done .ev-form,.events.done .ev-intro{display:none}
-  .events.done .ev-thanks{display:block}
-  @media (max-width:600px){.ev-form{grid-template-columns:1fr}}
+  /* ---- CTA band ---- */
+  .cta-band{background:var(--green-deep);color:var(--white);text-align:center;padding:clamp(3.5rem,7vw,6rem) 0}
+  .cta-band .eyebrow{color:var(--pink)}
+  .cta-band h2{font-size:clamp(1.2rem,1rem + 1.2vw,1.8rem);margin:.6rem 0 1.8rem}
+  .cta-row{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+  .btn-ghost2{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.5)}
+  .btn-ghost2:hover{border-color:var(--gold);color:var(--gold)}
+
 
   /* ---- Footer ---- */
   footer{background:var(--gold);color:var(--white);padding:2.2rem 0 1.4rem;text-align:center}
@@ -195,9 +204,28 @@
     @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
   }
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BarOrPub","name":"Temper Tantrums","alternateName":"Temper Tantrums Café & Wine Bar",
+"description":"Café by day, wine & cocktail bar by night. Italian at heart with Asian accents.",
+"url":"https://tempertantrums.co.uk","image":"https://tempertantrums.co.uk/img/venue-bar.jpg",
+"hasMenu":"https://tempertantrums.co.uk/menu.html","servesCuisine":["Italian","Asian fusion"],
+"address":{"@type":"PostalAddress","streetAddress":"94 Wimpole Street","addressLocality":"London","postalCode":"W1G 0EH","addressCountry":"GB"},
+"sameAs":["https://www.instagram.com/temper.tantrums.london"]}
+</script>
 </head>
 <body>
-
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="mark" href="index.html"><svg class="icon-t" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="490 200 180 220" fill="currentColor"><defs></defs><path d="M 514.582031 209.695312 C 500.078125 235.960938 498.507812 239.09375 497.332031 248.113281 L 499.292969 248.503906 C 507.917969 226.945312 526.734375 219.105469 529.085938 219.105469 L 559.664062 219.105469 C 564.367188 219.105469 568.679688 223.023438 568.679688 227.726562 L 568.679688 382.570312 C 568.679688 397.074219 567.503906 402.5625 562.796875 409.230469 C 558.09375 410.011719 554.957031 410.402344 552.214844 410.402344 C 548.6875 410.402344 545.160156 410.011719 541.628906 409.230469 L 541.628906 413.929688 C 544.765625 414.714844 546.335938 415.109375 551.039062 415.109375 C 554.566406 415.109375 572.597656 413.929688 576.910156 413.929688 C 577.480469 413.929688 578.058594 413.945312 578.632812 413.953125 L 578.632812 212.039062 C 569.4375 212.273438 561.855469 212.4375 558.09375 212.4375 C 545.941406 212.4375 530.652344 212.4375 514.582031 209.695312 "/><path d="M 648.015625 210.398438 C 638.066406 210.398438 606.308594 211.375 583.898438 211.949219 L 583.898438 413.882812 C 593.085938 414.027344 602.769531 415.027344 610.773438 415.027344 C 614.300781 415.027344 616.261719 415.027344 619.007812 413.851562 L 619.007812 409.148438 C 616.65625 410.324219 615.085938 410.71875 611.949219 410.71875 C 609.992188 410.71875 605.679688 410.324219 602.933594 409.933594 C 598.621094 406.40625 594.703125 401.699219 594.703125 393.078125 L 594.703125 230.390625 C 594.703125 220.199219 599.40625 218.628906 612.34375 218.628906 L 635.863281 218.628906 C 642.132812 218.628906 652.71875 218.628906 652.71875 234.3125 L 652.71875 237.449219 C 651.152344 239.800781 648.40625 244.503906 644.878906 248.425781 C 645.664062 248.816406 646.839844 249.992188 647.625 250.382812 C 658.992188 237.839844 661.34375 226.082031 661.34375 223.726562 C 661.34375 213.535156 655.464844 210.398438 648.015625 210.398438 "/></svg><span>Temper Tantrums</span></a>
+    <ul>
+      <li><a href="menu.html">Menus</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="space.html">The Space</a></li>
+      <li><a href="find-us.html">Find Us</a></li>
+      <li><a class="btn btn-gold" href="index.html#signup">Sign up</a></li>
+    </ul>
+  </div>
+</nav>
 
 <section class="hero" id="top">
   <video class="hero-video" autoplay muted loop playsinline poster="img/opening-poster.jpg" preload="metadata">
@@ -273,34 +301,15 @@
   </div>
 </section>
 
-<section class="night-out">
+<section class="cta-band">
   <div class="wrap">
-    <p class="eyebrow">Open at last</p>
-    <h2>The doors are open</h2>
-    <div class="no-grid">
-      <img class="wide" src="img/venue-exterior.jpg" alt="Crowd outside Temper Tantrums on Wimpole Street" loading="lazy">
-      <img class="tall" src="img/live-singer.jpg" alt="A singer performing in the bar" loading="lazy">
-      <img class="tall" src="img/live-sax.jpg" alt="Saxophonist playing at Temper Tantrums" loading="lazy">
+    <p class="eyebrow">Open now in Marylebone</p>
+    <h2>Come and lose your temper</h2>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="menu.html">View the menus</a>
+      <a class="btn btn-ghost2" href="events.html">Private hire &amp; events</a>
+      <a class="btn btn-ghost2" href="find-us.html">Find us</a>
     </div>
-  </div>
-</section>
-
-<section class="events" id="events">
-  <div class="wrap">
-    <p class="eyebrow">Private hire &amp; events</p>
-    <h2>Throw a tantrum of your own</h2>
-    <p class="ev-intro">Birthdays, launches, takeovers and gatherings that run late. Tell us what you&rsquo;re planning and the team will come back to you.</p>
-    <form class="ev-form" id="ev-form" action="#" method="post" novalidate>
-      <input name="name" type="text" autocomplete="name" placeholder="Your name" required>
-      <input name="email" type="email" inputmode="email" autocomplete="email" placeholder="Your email address" required>
-      <input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Phone (optional)">
-      <input name="date" type="text" placeholder="Preferred date">
-      <input name="guests" type="text" inputmode="numeric" placeholder="Number of guests" style="grid-column:1/-1">
-      <textarea name="message" placeholder="Tell us about your event" required></textarea>
-      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
-      <button class="btn btn-gold" type="submit">Send enquiry</button>
-    </form>
-    <div class="ev-thanks" role="status" aria-live="polite"><strong>Enquiry sent</strong>The team will be in touch shortly.</div>
   </div>
 </section>
 
@@ -321,7 +330,7 @@
         <a href="https://instagram.com/temper.tantrums.london" target="_blank" rel="noopener">@temper.tantrums.london</a>
       </div>
     </div>
-    <p class="f-copy">&copy; 2026 Temper Tantrums</p>
+    <p class="f-copy">&copy; 2026 Temper Tantrums &middot; <a href="events.html" style="color:inherit">Private hire &amp; events</a></p>
   </div>
 </footer>
 
@@ -345,23 +354,6 @@
   }
   wire('form', location.hostname, function(){ document.getElementById('signup').classList.add('done'); });
 
-  // Events enquiry → same Apps Script endpoint (type=event), which emails the team
-  document.getElementById('ev-form').addEventListener('submit', function(e){
-    e.preventDefault();
-    var form = this, btn = form.querySelector('button[type=submit]');
-    if (!form.checkValidity()) { form.reportValidity(); return; }
-    if (form.website.value) return; // honeypot
-    btn.disabled = true; btn.textContent = 'One moment…';
-    var body = new URLSearchParams({
-      type: 'event',
-      name: form.name.value.trim(),
-      email: form.email.value.trim(),
-      phone: form.phone.value.trim(),
-      date: form.date.value.trim(),
-      guests: form.guests.value.trim(),
-      message: form.message.value.trim(),
-      source: location.hostname
-    });
     fetch(SIGNUP_URL, { method: 'POST', mode: 'no-cors', body: body })
       .catch(function(){})
       .finally(function(){ document.getElementById('events').classList.add('done'); });
