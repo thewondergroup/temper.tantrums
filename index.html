@@ -65,19 +65,21 @@
 
   /* ---- Hero ---- */
   .hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;padding:6rem 0 5rem;background:var(--green);isolation:isolate;overflow:hidden}
-  .hero-video{position:absolute;inset:0;z-index:-3;width:100%;height:100%;object-fit:cover}
-  .hero-shade{position:absolute;inset:0;z-index:-2;background:rgba(44,67,52,.62)}
+  .hero-video{position:absolute;inset:0;z-index:-3;width:100%;height:100%;object-fit:cover;filter:brightness(.82) contrast(1.08) saturate(1.05)}
+  .hero-shade{position:absolute;inset:0;z-index:-2;background:
+    linear-gradient(180deg,rgba(20,28,22,.55) 0%,rgba(20,28,22,.18) 32%,rgba(20,28,22,.22) 62%,rgba(31,45,35,.92) 100%),
+    radial-gradient(ellipse 120% 90% at 50% 42%,transparent 40%,rgba(10,16,12,.55) 100%)}
   .hero-ctas{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
   .btn-ghost{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.55)}
   .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
   .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 70% 60% at 50% 40%,rgba(157,126,76,.22),transparent 70%)}
   .hero .icon-bg{position:absolute;z-index:-1;width:min(70vw,560px);color:var(--gold);opacity:.07;left:50%;top:50%;transform:translate(-50%,-52%);pointer-events:none}
   .hero .wrap{max-width:760px}
-  .logo-stacked{width:min(70vw,380px);margin:0 auto 3rem;color:var(--white)}
+  .logo-stacked{width:min(66vw,350px);margin:0 auto 2.4rem;color:var(--white);filter:drop-shadow(0 4px 28px rgba(0,0,0,.5))}
   .hero .eyebrow{color:var(--pink);margin-bottom:1rem}
-  .hero h1{font-size:clamp(1.5rem,1.1rem + 2.4vw,2.7rem);color:var(--white)}
+  .hero h1{font-size:clamp(1.9rem,1.2rem + 3.4vw,3.6rem);color:var(--white);text-shadow:0 2px 24px rgba(0,0,0,.45)}
   .hero h1 .date{display:block;color:var(--gold);margin-top:.35rem;font-size:1.25em}
-  .hero .lede{margin:1.5rem auto 0;max-width:34em;color:rgba(255,255,255,.88)}
+  .hero .lede{margin:1.2rem auto 0;max-width:34em;color:rgba(255,255,255,.95);text-shadow:0 1px 14px rgba(0,0,0,.4)}
   .hero .about{max-width:36em;margin:1rem auto 0;font-size:clamp(1rem,.95rem + .3vw,1.15rem);line-height:1.6;color:rgba(255,255,255,.8)}
   .hero .tag{font-style:italic;color:var(--pink);margin-top:1rem;font-size:1.1rem}
   .rule{width:64px;height:1px;background:var(--gold);margin:2rem auto}
@@ -203,6 +205,31 @@
     .hero .wrap>*:nth-child(2){animation-delay:.1s}.hero .wrap>*:nth-child(3){animation-delay:.2s}.hero .wrap>*:nth-child(4){animation-delay:.3s}.hero .wrap>*:nth-child(5){animation-delay:.4s}.hero .wrap>*:nth-child(6){animation-delay:.5s}.hero .wrap>*:nth-child(7){animation-delay:.6s}
     @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
   }
+
+  /* ---- Sticky nav ---- */
+  .nav{position:fixed;inset:0 0 auto 0;z-index:40;padding:1rem 0;background:linear-gradient(rgba(0,0,0,.32),transparent);transition:background .3s,box-shadow .3s,padding .3s}
+  .nav.scrolled{background:rgba(31,41,34,.88);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 6px 24px rgba(0,0,0,.25);padding:.7rem 0}
+  @media (max-width:760px){.nav{position:fixed}}
+  ::selection{background:var(--pink);color:var(--white)}
+
+  /* ---- Reveal on scroll ---- */
+  @media (prefers-reduced-motion:no-preference){
+    .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+    .reveal.in{opacity:1;transform:none}
+  }
+
+  /* ---- Image hover life ---- */
+  .hoverzoom{overflow:hidden;display:block}
+  .hoverzoom img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+  .hoverzoom:hover img{transform:scale(1.045)}
+
+  /* ---- Ticker ---- */
+  .tick{background:var(--gold);color:var(--white);overflow:hidden;padding:.8rem 0;border-top:1px solid rgba(255,255,255,.25);border-bottom:1px solid rgba(255,255,255,.25)}
+  .tick-track{display:flex;width:max-content;animation:tick 30s linear infinite}
+  .tick span{font-family:var(--f-head);font-weight:700;font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;white-space:nowrap;padding-right:.9em}
+  .tick b{color:var(--green);font-weight:700;padding-right:.9em}
+  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion:reduce){.tick-track{animation:none}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BarOrPub","name":"Temper Tantrums","alternateName":"Temper Tantrums Café & Wine Bar",
@@ -212,7 +239,15 @@
 "address":{"@type":"PostalAddress","streetAddress":"94 Wimpole Street","addressLocality":"London","postalCode":"W1G 0EH","addressCountry":"GB"},
 "sameAs":["https://www.instagram.com/temper.tantrums.london"]}
 </script>
-</head>
+<style>.scrolldown{position:absolute;bottom:1.4rem;left:50%;transform:translateX(-50%);z-index:2;color:rgba(255,255,255,.7);font-family:var(--f-head);font-size:.58rem;letter-spacing:.34em;text-transform:uppercase;text-decoration:none;animation:bob 2.4s ease-in-out infinite}@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}.scrolldown:hover{color:var(--gold)}
+  /* ---- Ticker ---- */
+  .tick{background:var(--gold);color:var(--white);overflow:hidden;padding:.8rem 0;border-top:1px solid rgba(255,255,255,.25);border-bottom:1px solid rgba(255,255,255,.25)}
+  .tick-track{display:flex;width:max-content;animation:tick 30s linear infinite}
+  .tick span{font-family:var(--f-head);font-weight:700;font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;white-space:nowrap;padding-right:.9em}
+  .tick b{color:var(--green);font-weight:700;padding-right:.9em}
+  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion:reduce){.tick-track{animation:none}}
+</style></head>
 <body>
 <nav class="nav" aria-label="Main">
   <div class="wrap">
@@ -252,9 +287,12 @@
       <a class="btn btn-ghost" href="menu.html">View the menus</a>
     </div>
   </div>
+  <a class="scrolldown" href="#day-night">Scroll</a>
 </section>
 
-<section class="split" aria-label="Day and night">
+<div class="tick" aria-hidden="true"><div class="tick-track"><span>Café</span><b>·</b><span>Cocktails</span><b>·</b><span>Conviviality</span><b>·</b><span>Serious Wine</span><b>·</b><span>Playful Plates</span><b>·</b><span>A Taste for Mischief</span><b>·</b><span>Café</span><b>·</b><span>Cocktails</span><b>·</b><span>Conviviality</span><b>·</b><span>Serious Wine</span><b>·</b><span>Playful Plates</span><b>·</b><span>A Taste for Mischief</span><b>·</b></div></div>
+
+<section class="split" id="day-night" aria-label="Day and night">
   <div class="panel day">
     <img src="img/venue-lounge.jpg" alt="The bar and lounge at Temper Tantrums" loading="lazy">
     <div class="ptext">
@@ -293,10 +331,10 @@
     <p class="eyebrow">The food</p>
     <h2>Playful plates</h2>
     <div class="plate-grid">
-      <figure><img src="img/flatbread.jpg" alt="Flatbread with coppa, pesto and rocket" loading="lazy"><figcaption>Flatbreads</figcaption></figure>
-      <figure><img src="img/coppa.jpg" alt="Coppa with rocket and parmesan" loading="lazy"><figcaption>Charcuterie</figcaption></figure>
-      <figure><img src="img/crisps.jpg" alt="Crisps with prosciutto, cheese and pesto" loading="lazy"><figcaption>Tasting plates</figcaption></figure>
-      <figure><img src="img/tiramisu-dark.jpg" alt="Matcha tiramisu" loading="lazy"><figcaption>Matcha tiramisu</figcaption></figure>
+      <figure><span class="hoverzoom"><img src="img/flatbread.jpg" alt="Flatbread with coppa, pesto and rocket" loading="lazy"></span><figcaption>Flatbreads</figcaption></figure>
+      <figure><span class="hoverzoom"><img src="img/coppa.jpg" alt="Coppa with rocket and parmesan" loading="lazy"></span><figcaption>Charcuterie</figcaption></figure>
+      <figure><span class="hoverzoom"><img src="img/crisps.jpg" alt="Crisps with prosciutto, cheese and pesto" loading="lazy"></span><figcaption>Tasting plates</figcaption></figure>
+      <figure><span class="hoverzoom"><img src="img/tiramisu-dark.jpg" alt="Matcha tiramisu" loading="lazy"></span><figcaption>Matcha tiramisu</figcaption></figure>
     </div>
   </div>
 </section>
@@ -359,6 +397,19 @@
       .finally(function(){ document.getElementById('events').classList.add('done'); });
   });
 
+</script>
+<script>
+  (function(){
+    var nav = document.querySelector('.nav');
+    function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 24); }
+    window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {rootMargin:'0px 0px -8% 0px'});
+      document.querySelectorAll('section > .wrap > *, .intro .wrap > *, .panel .ptext > *').forEach(function(el){ el.classList.add('reveal'); io.observe(el); });
+    } else {
+      document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+    }
+  })();
 </script>
 </body>
 </html>

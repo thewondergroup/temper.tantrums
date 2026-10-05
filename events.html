@@ -86,6 +86,23 @@
   .ev-thanks strong{font-family:var(--f-head);letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;color:var(--gold);display:block;margin-bottom:.4rem}
   .ev-wrap.done .ev-form{display:none}
   .ev-wrap.done .ev-thanks{display:block}
+
+  /* ---- Sticky nav ---- */
+  .nav{position:fixed;inset:0 0 auto 0;z-index:40;padding:1rem 0;background:linear-gradient(rgba(0,0,0,.32),transparent);transition:background .3s,box-shadow .3s,padding .3s}
+  .nav.scrolled{background:rgba(31,41,34,.88);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 6px 24px rgba(0,0,0,.25);padding:.7rem 0}
+  @media (max-width:760px){.nav{position:fixed}}
+  ::selection{background:var(--pink);color:var(--white)}
+
+  /* ---- Reveal on scroll ---- */
+  @media (prefers-reduced-motion:no-preference){
+    .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+    .reveal.in{opacity:1;transform:none}
+  }
+
+  /* ---- Image hover life ---- */
+  .hoverzoom{overflow:hidden;display:block}
+  .hoverzoom img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+  .hoverzoom:hover img{transform:scale(1.045)}
 </style>
 </head>
 <body>
@@ -109,9 +126,9 @@
   </div>
 </header>
 <div class="wrap ev-gal">
-  <img class="wide" src="img/venue-exterior.jpg" alt="Guests gathered outside Temper Tantrums on Wimpole Street">
-  <img class="tall" src="img/live-singer.jpg" alt="A singer performing in the bar" loading="lazy">
-  <img class="tall" src="img/live-sax.jpg" alt="Saxophonist playing beneath the Bowie portrait" loading="lazy">
+  <span class="hoverzoom"><img class="wide" src="img/venue-exterior.jpg" alt="Guests gathered outside Temper Tantrums on Wimpole Street"></span>
+  <span class="hoverzoom"><img class="tall" src="img/live-singer.jpg" alt="A singer performing in the bar" loading="lazy"></span>
+  <span class="hoverzoom"><img class="tall" src="img/live-sax.jpg" alt="Saxophonist playing beneath the Bowie portrait" loading="lazy"></span>
 </div>
 <section class="ev-body">
   <div class="wrap ev-cols">
@@ -168,5 +185,18 @@
     <p class="f-copy">&copy; 2026 Temper Tantrums &middot; <a href="events.html" style="color:inherit">Private hire &amp; events</a></p>
   </div>
 </footer>
+<script>
+  (function(){
+    var nav = document.querySelector('.nav');
+    function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 24); }
+    window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {rootMargin:'0px 0px -8% 0px'});
+      document.querySelectorAll('section > .wrap > *, .intro .wrap > *, .panel .ptext > *').forEach(function(el){ el.classList.add('reveal'); io.observe(el); });
+    } else {
+      document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+    }
+  })();
+</script>
 </body>
 </html>
