@@ -277,6 +277,7 @@
   @media (min-width:761px){
     body[data-mood="evening"] .split .night{order:-1}
   }
+  .nav-xmas::before{content:"\2605";color:var(--gold);font-size:.75em;margin-right:.45em;vertical-align:.08em}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BarOrPub","name":"Temper Tantrums","alternateName":"Temper Tantrums Café & Wine Bar",
@@ -327,7 +328,7 @@
     <ul>
       <li><a href="menu.html">Menus</a></li>
       <li><a href="events.html">Private Hire</a></li>
-      <li><a href="christmas.html" style="color:var(--gold)">Christmas</a></li>
+      <li><a href="christmas.html" class="nav-xmas">Christmas</a></li>
       <li><a href="space.html">The Space</a></li>
       <li><a href="find-us.html">Find Us</a></li>
       <li><a class="btn btn-gold" href="https://www.opentable.com/r/temper-tantrums-london" target="_blank" rel="noopener">Book a table</a></li>
@@ -513,13 +514,20 @@
     var status = document.getElementById('mood-status');
     var open = (h >= 8) && !(day === 0 && h >= 20) && !(day !== 0 && day !== 6 && h >= 23);
     if (status) {
-      if (mood === 'morning') status.textContent = open ? 'Breakfast is on · open until ' + closes : 'Doors open at 8am';
-      if (mood === 'afternoon') status.textContent = 'Lunch cicchetti from midday · open until ' + closes;
-      if (mood === 'evening') status.textContent = open ? 'Open tonight until ' + closes : 'Dinner from 5pm · book ahead';
+      var parts = [
+        {k:'morning', label:'Breakfast 8am'},
+        {k:'afternoon', label:'Lunch 12pm'},
+        {k:'evening', label:'Dinner 5pm'}
+      ].map(function(x){
+        var on = x.k === mood && open;
+        return on ? '<span style="color:var(--white)">' + x.label + ' — now</span>' : x.label;
+      }).join(' · ');
+      var tail = open ? 'open until ' + closes : (h < 8 ? 'doors open 8am' : 'see you tomorrow from 8am');
+      status.innerHTML = parts + ' · ' + tail + (mood === 'evening' ? ' · <a href="events.html" style="color:inherit">private hire</a>' : '');
     }
     var p = document.getElementById('cta-primary'), sec = document.getElementById('cta-secondary');
-    if (p && sec && mood === 'morning') { p.textContent = 'Breakfast menu'; p.href = 'menu.html#cafe'; p.removeAttribute('target'); sec.textContent = 'Book a table'; sec.href = 'https://www.opentable.com/r/temper-tantrums-london'; sec.target='_blank'; }
-    if (p && sec && mood === 'afternoon') { p.textContent = 'Lunch menu'; p.href = 'menu.html#lunch'; p.removeAttribute('target'); sec.textContent = 'Book a table'; sec.href = 'https://www.opentable.com/r/temper-tantrums-london'; sec.target='_blank'; }
+    if (p && sec && mood === 'morning') { p.textContent = 'View the menus'; p.href = 'menu.html#cafe'; p.removeAttribute('target'); sec.textContent = 'Book a table'; sec.href = 'https://www.opentable.com/r/temper-tantrums-london'; sec.target='_blank'; }
+    if (p && sec && mood === 'afternoon') { p.textContent = 'View the menus'; p.href = 'menu.html#lunch'; p.removeAttribute('target'); sec.textContent = 'Book a table'; sec.href = 'https://www.opentable.com/r/temper-tantrums-london'; sec.target='_blank'; }
     // evening keeps Book a table primary
 
     var tick = document.getElementById('tick-track');
@@ -527,7 +535,7 @@
       var words = {
         morning:  ['Coffee','Cornetti','Breakfast Bruschetta','Matcha Lattes','Fresh Pastries','A Taste for Mischief'],
         afternoon:['Cicchetti','Pinsa Romana','Crostini','Long Lunches','Playful Plates','A Taste for Mischief'],
-        evening:  ['Café','Cocktails','Conviviality','Serious Wine','Playful Plates','A Taste for Mischief']
+        evening:  ['Cocktails','Serious Wine','Playful Plates','Private Hire','Takeovers','A Taste for Mischief']
       }[mood];
       var half = words.map(function(w){ return '<span>'+w+'</span><b>·</b>'; }).join('');
       tick.innerHTML = half + half;
