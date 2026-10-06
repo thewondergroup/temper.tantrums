@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Find Us — 94 Wimpole Street, Marylebone | Temper Tantrums</title>
-<meta name="description" content="Temper Tantrums, 94 Wimpole Street, London W1G 0EH. A few minutes from Bond Street and Oxford Circus.">
-<meta property="og:title" content="Find Us — 94 Wimpole Street, Marylebone | Temper Tantrums">
-<meta property="og:description" content="Temper Tantrums, 94 Wimpole Street, London W1G 0EH. A few minutes from Bond Street and Oxford Circus.">
-<meta property="og:image" content="https://tempertantrums.co.uk/img/venue-exterior.jpg">
+<title>Christmas Parties in Marylebone | Temper Tantrums</title>
+<meta name="description" content="Book a Christmas party at Temper Tantrums, Marylebone — chandeliers, cocktails, Italian feasting and group takeovers minutes from Oxford Circus. December 2026 enquiries open.">
+<meta property="og:title" content="Christmas Parties in Marylebone | Temper Tantrums">
+<meta property="og:description" content="Book a Christmas party at Temper Tantrums, Marylebone — chandeliers, cocktails, Italian feasting and group takeovers minutes from Oxford Circus. December 2026 enquiries open.">
+<meta property="og:image" content="https://tempertantrums.co.uk/img/venue-ceiling.jpg">
 <meta name="theme-color" content="#395542">
-<link rel="canonical" href="https://tempertantrums.co.uk/find-us.html">
-<meta property="og:url" content="https://tempertantrums.co.uk/find-us.html">
+<link rel="canonical" href="https://tempertantrums.co.uk/christmas.html">
+<meta property="og:url" content="https://tempertantrums.co.uk/christmas.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Temper Tantrums">
 <meta property="og:locale" content="en_GB">
@@ -72,46 +72,45 @@
   .f-copy{margin-top:1.6rem;font-family:var(--f-ui);font-size:.68rem;color:rgba(255,255,255,.6)}
   @media (max-width:760px){.f-grid{grid-template-columns:1fr;gap:1.1rem}}
 
-  .fu{background:var(--cream);color:var(--green);padding:clamp(3rem,6vw,5rem) 0}
-  .fu-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:start}
-  @media (max-width:760px){.fu-grid{grid-template-columns:1fr}}
-  .fu h2{font-size:.72rem;letter-spacing:.3em;color:var(--gold);margin:1.8rem 0 .5rem;font-family:var(--f-head);font-weight:600;text-transform:uppercase}
-  .fu h2:first-child{margin-top:0}
-  .fu p,.fu a{font-size:clamp(1.05rem,1rem + .4vw,1.25rem);line-height:1.6}
-  .fu a{color:var(--green)}
-  .fu a:hover{color:var(--gold)}
-  .fu .note{font-family:var(--f-ui);font-size:.9rem;color:rgba(57,85,66,.7)}
-  .fu-map{border:0;width:100%;aspect-ratio:4/3;display:block;filter:saturate(.85)}
+  .intro.xmas{background:var(--green-deep)}
+  .intro.xmas .eyebrow{color:var(--gold)}
+  .xm-gal{display:grid;grid-template-columns:1fr 1.6fr 1fr;gap:1rem;padding:0 0 .5rem}
+  .xm-gal img{width:100%;height:100%;object-fit:cover}
+  .xm-gal img.tall{aspect-ratio:3/4}
+  @media (max-width:760px){.xm-gal{grid-template-columns:1fr 1fr}.xm-gal img.wide{grid-column:1/-1;aspect-ratio:16/10}}
+  .xm-body{background:var(--cream);color:var(--green);padding:clamp(3rem,6vw,5rem) 0}
+  .xm-cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4.5rem);align-items:start}
+  @media (max-width:760px){.xm-cols{grid-template-columns:1fr}}
+  .xm-cols h2{font-size:clamp(1.1rem,1rem + .8vw,1.5rem);color:var(--green);margin-bottom:1rem}
+  .xm-cols p{font-size:clamp(1.05rem,1rem + .4vw,1.2rem);line-height:1.6;margin-bottom:1rem;max-width:30em}
+  .xm-cols .tag{font-style:italic;color:var(--pink);font-size:1.15rem}
+  .xm-list{list-style:none;margin:0 0 1rem}
+  .xm-list li{font-size:1.08rem;line-height:1.6;padding-left:1.4em;position:relative;margin-bottom:.5rem}
+  .xm-list li::before{content:"\2605";position:absolute;left:0;color:var(--gold);font-size:.8em;top:.3em}
+  .ev-form{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+  .ev-form input,.ev-form textarea{font-family:var(--f-ui);font-size:.95rem;padding:.9rem 1rem;border:1px solid rgba(57,85,66,.4);background:var(--white);color:var(--green);border-radius:0;width:100%}
+  .ev-form input::placeholder,.ev-form textarea::placeholder{color:rgba(57,85,66,.55)}
+  .ev-form input:focus,.ev-form textarea:focus{border-color:var(--gold);outline:none}
+  .ev-form textarea{grid-column:1/-1;min-height:120px;resize:vertical}
+  .ev-form .btn{grid-column:1/-1;justify-self:start;min-width:240px;text-align:center}
+  @media (max-width:600px){.ev-form{grid-template-columns:1fr}.ev-form .btn{width:100%}}
+  .ev-thanks{display:none;border:1px solid var(--gold);padding:1.4rem}
+  .ev-thanks strong{font-family:var(--f-head);letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;color:var(--gold);display:block;margin-bottom:.4rem}
+  .ev-wrap.done .ev-form{display:none}
+  .ev-wrap.done .ev-thanks{display:block}
 
-  /* ---- Sticky nav ---- */
   .nav{position:fixed;inset:0 0 auto 0;z-index:40;padding:1rem 0;background:linear-gradient(rgba(0,0,0,.32),transparent);transition:background .3s,box-shadow .3s,padding .3s}
   .nav.scrolled{background:rgba(31,41,34,.88);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 6px 24px rgba(0,0,0,.25);padding:.7rem 0}
-  @media (max-width:760px){.nav{position:fixed}}
   ::selection{background:var(--pink);color:var(--white)}
-
-  /* ---- Reveal on scroll ---- */
   @media (prefers-reduced-motion:no-preference){
     .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
     .reveal.in{opacity:1;transform:none}
   }
-
-  /* ---- Image hover life ---- */
   .hoverzoom{overflow:hidden;display:block}
   .hoverzoom img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
   .hoverzoom:hover img{transform:scale(1.045)}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BarOrPub","name":"Temper Tantrums",
-"url":"https://tempertantrums.co.uk","address":{"@type":"PostalAddress","streetAddress":"94 Wimpole Street","addressLocality":"London","postalCode":"W1G 0EH","addressCountry":"GB"},
- "openingHoursSpecification":[
- {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"23:00"},
- {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"00:00"},
- {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"08:00","closes":"20:00"}],
-"geo":{"@type":"GeoCoordinates","latitude":51.5204,"longitude":-0.1484},
-"acceptsReservations":"https://www.opentable.com/r/temper-tantrums-london",
-"hasMap":"https://maps.google.com/?q=Temper+Tantrums,+94+Wimpole+Street,+London+W1G+0EH",
-"sameAs":["https://www.instagram.com/temper.tantrums.london"]}
-</script></head>
+</head>
 <body>
 <nav class="nav" aria-label="Main">
   <div class="wrap">
@@ -119,43 +118,66 @@
     <ul>
       <li><a href="menu.html">Menus</a></li>
       <li><a href="events.html">Events</a></li>
-      <li><a href="christmas.html" style="color:var(--gold)">Christmas</a></li>
+      <li><a href="christmas.html" aria-current="page" style="color:var(--gold)">Christmas</a></li>
       <li><a href="space.html">The Space</a></li>
-      <li><a href="find-us.html" aria-current="page">Find Us</a></li>
+      <li><a href="find-us.html">Find Us</a></li>
       <li><a class="btn btn-gold" href="https://www.opentable.com/r/temper-tantrums-london" target="_blank" rel="noopener">Book a table</a></li>
     </ul>
   </div>
 </nav>
-<header class="intro" style="padding-top:clamp(6rem,10vw,8rem)">
+<header class="intro xmas" style="padding-top:clamp(6rem,10vw,8rem)">
   <div class="wrap">
-    <p class="eyebrow">Find us</p>
-    <h1>94 Wimpole Street</h1>
-    <p>On the quiet side of Marylebone, a few minutes&rsquo; walk from the high street.</p>
+    <p class="eyebrow">Christmas 2026</p>
+    <h1>Christmas parties,<br>badly behaved</h1>
+    <p>Skip the function room. This year, throw the Christmas party people actually talk about afterwards &mdash; chandeliers, cocktails, Italian feasting and a room with a taste for mischief.</p>
   </div>
 </header>
-<section class="fu">
-  <div class="wrap fu-grid">
+<div class="wrap xm-gal">
+  <img class="tall" src="img/venue-ceiling.jpg" alt="Chandeliers beneath the ceiling of rock and roll portraits">
+  <img class="wide" src="img/live-band.jpg" alt="Live music at Temper Tantrums" loading="lazy" style="aspect-ratio:auto">
+  <img class="tall" src="img/live-bartender.jpg" alt="A cocktail being poured at the bar" loading="lazy">
+</div>
+<section class="xm-body">
+  <div class="wrap xm-cols">
     <div>
-      <h2>Address</h2>
-      <p>Temper Tantrums<br>94 Wimpole Street<br>London W1G 0EH</p>
-      <h2>Getting here</h2>
-      <p>Bond Street (Elizabeth, Central &amp; Jubilee) and Oxford Circus are both under ten minutes on foot; Regent&rsquo;s Park and Baker Street are a short walk north.</p>
-      <h2>Opening hours</h2>
-      <p>Monday &ndash; Friday: 8am &ndash; 11pm<br>
-      Saturday: 8am &ndash; midnight<br>
-      Sunday: 8am &ndash; 8pm</p>
-      <p class="note" style="margin-top:.4rem">Breakfast from 8am &middot; Lunch from 12pm &middot; Dinner from 5pm</p>
-      <h2>Book a table</h2>
-      <p><a href="https://www.opentable.com/r/temper-tantrums-london" target="_blank" rel="noopener">Reserve on OpenTable</a>, or walk in and chance it.</p>
-      <h2>Say hello</h2>
-      <p><a href="https://instagram.com/temper.tantrums.london" target="_blank" rel="noopener">@temper.tantrums.london</a><br><a href="events.html">Private hire &amp; events enquiries</a></p>
+      <h2>The office party, fixed</h2>
+      <p>A candlelit room of collected mirrors, velvet and chandeliers on Wimpole Street &mdash; minutes from Oxford Circus and Bond Street, so nobody has an excuse not to come.</p>
+      <ul class="xm-list">
+        <li>Groups and takeovers, from a long table to the whole room</li>
+        <li>Italian feasting &mdash; salumi, formaggio, pinsa romana and plates built for sharing</li>
+        <li>Serious wine and exceptional cocktails, flowing</li>
+        <li>Open until 11pm weeknights and midnight on Saturdays</li>
+      </ul>
+      <p>Tell us your date, your numbers and how badly behaved you&rsquo;d like it, and the team will build the rest around you. December dates go first &mdash; book the tantrum early.</p>
+      <p class="tag">Irreverent elegance with a taste for mischief.</p>
     </div>
-    <div>
-      <iframe class="fu-map" title="Map showing Temper Tantrums at 94 Wimpole Street, London" src="https://www.google.com/maps?q=94%20Wimpole%20Street%2C%20London%20W1G%200EH&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <p class="note" style="margin-top:.6rem">Opens in Google Maps: <a href="https://maps.google.com/?q=Temper+Tantrums,+94+Wimpole+Street,+London+W1G+0EH" target="_blank" rel="noopener">directions</a></p>
+    <div class="ev-wrap" id="ev-wrap">
+      <form class="ev-form" id="ev-form" action="#" method="post" novalidate>
+        <input name="name" type="text" autocomplete="name" placeholder="Your name" required>
+        <input name="email" type="email" inputmode="email" autocomplete="email" placeholder="Your email address" required>
+        <input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Phone (optional)">
+        <input name="date" type="text" placeholder="Preferred date in December">
+        <input name="guests" type="text" inputmode="numeric" placeholder="Number of guests" style="grid-column:1/-1">
+        <textarea name="message" placeholder="Tell us about your Christmas party" required></textarea>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        <button class="btn btn-gold" type="submit">Send enquiry</button>
+      </form>
+      <div class="ev-thanks" role="status" aria-live="polite"><strong>Enquiry sent</strong>The team will be in touch shortly.</div>
     </div>
   </div>
 </section>
+<script>
+  var SIGNUP_URL = 'https://script.google.com/macros/s/AKfycbz17u-_AUbBmUHk-gPUCZVjfEha7hW1yWQpVycbq3SHwE0-WaVh9nqv0k6e4cxn3LRt/exec';
+  document.getElementById('ev-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var form = this, btn = form.querySelector('button[type=submit]');
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    if (form.website.value) return;
+    btn.disabled = true; btn.textContent = 'One moment…';
+    var body = new URLSearchParams({ type:'event', name:form.name.value.trim(), email:form.email.value.trim(), phone:form.phone.value.trim(), date:'XMAS: '+form.date.value.trim(), guests:form.guests.value.trim(), message:form.message.value.trim(), source:location.hostname + ' christmas page' });
+    fetch(SIGNUP_URL, { method:'POST', mode:'no-cors', body:body }).catch(function(){}).finally(function(){ document.getElementById('ev-wrap').classList.add('done'); });
+  });
+</script>
 <footer>
   <div class="wrap">
     <svg class="icon-t" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="490 200 180 220" fill="currentColor"><defs></defs><path d="M 514.582031 209.695312 C 500.078125 235.960938 498.507812 239.09375 497.332031 248.113281 L 499.292969 248.503906 C 507.917969 226.945312 526.734375 219.105469 529.085938 219.105469 L 559.664062 219.105469 C 564.367188 219.105469 568.679688 223.023438 568.679688 227.726562 L 568.679688 382.570312 C 568.679688 397.074219 567.503906 402.5625 562.796875 409.230469 C 558.09375 410.011719 554.957031 410.402344 552.214844 410.402344 C 548.6875 410.402344 545.160156 410.011719 541.628906 409.230469 L 541.628906 413.929688 C 544.765625 414.714844 546.335938 415.109375 551.039062 415.109375 C 554.566406 415.109375 572.597656 413.929688 576.910156 413.929688 C 577.480469 413.929688 578.058594 413.945312 578.632812 413.953125 L 578.632812 212.039062 C 569.4375 212.273438 561.855469 212.4375 558.09375 212.4375 C 545.941406 212.4375 530.652344 212.4375 514.582031 209.695312 "/><path d="M 648.015625 210.398438 C 638.066406 210.398438 606.308594 211.375 583.898438 211.949219 L 583.898438 413.882812 C 593.085938 414.027344 602.769531 415.027344 610.773438 415.027344 C 614.300781 415.027344 616.261719 415.027344 619.007812 413.851562 L 619.007812 409.148438 C 616.65625 410.324219 615.085938 410.71875 611.949219 410.71875 C 609.992188 410.71875 605.679688 410.324219 602.933594 409.933594 C 598.621094 406.40625 594.703125 401.699219 594.703125 393.078125 L 594.703125 230.390625 C 594.703125 220.199219 599.40625 218.628906 612.34375 218.628906 L 635.863281 218.628906 C 642.132812 218.628906 652.71875 218.628906 652.71875 234.3125 L 652.71875 237.449219 C 651.152344 239.800781 648.40625 244.503906 644.878906 248.425781 C 645.664062 248.816406 646.839844 249.992188 647.625 250.382812 C 658.992188 237.839844 661.34375 226.082031 661.34375 223.726562 C 661.34375 213.535156 655.464844 210.398438 648.015625 210.398438 "/></svg>
@@ -184,9 +206,7 @@
     window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {rootMargin:'0px 0px -8% 0px'});
-      document.querySelectorAll('section > .wrap > *, .intro .wrap > *, .panel .ptext > *').forEach(function(el){ el.classList.add('reveal'); io.observe(el); });
-    } else {
-      document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+      document.querySelectorAll('section > .wrap > *, .intro .wrap > *').forEach(function(el){ el.classList.add('reveal'); io.observe(el); });
     }
   })();
 </script>
