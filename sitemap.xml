@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://tempertantrums.co.uk/</loc></url>
-  <url><loc>https://tempertantrums.co.uk/menu.html</loc></url>
-  <url><loc>https://tempertantrums.co.uk/events.html</loc></url>
-  <url><loc>https://tempertantrums.co.uk/space.html</loc></url>
-  <url><loc>https://tempertantrums.co.uk/find-us.html</loc></url>
-  <url><loc>https://tempertantrums.co.uk/christmas.html</loc></url>
+  <url><loc>https://tempertantrums.co.uk/menu/</loc></url>
+  <url><loc>https://tempertantrums.co.uk/events/</loc></url>
+  <url><loc>https://tempertantrums.co.uk/christmas/</loc></url>
+  <url><loc>https://tempertantrums.co.uk/space/</loc></url>
+  <url><loc>https://tempertantrums.co.uk/find-us/</loc></url>
 </urlset>
