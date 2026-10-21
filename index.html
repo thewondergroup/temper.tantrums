@@ -1,281 +1,821 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Temper Tantrums — Café &amp; Wine Bar in Marylebone, London</title>
-<meta name="description" content="Temper Tantrums — café by day, wine & cocktails by night. Now open at 94 Wimpole Street, Marylebone. Italian at heart with Asian accents.">
-<meta property="og:title" content="Temper Tantrums — Café & Wine Bar in Marylebone, London">
-<meta property="og:image" content="https://tempertantrums.co.uk/img/venue-bar.jpg">
-<meta property="og:description" content="Café by day. Wine & cocktails by night. Now open at 94 Wimpole Street, London. Irreverent elegance with a taste for mischief.">
-<meta name="theme-color" content="#395542">
-<link rel="canonical" href="https://tempertantrums.co.uk/">
-<meta property="og:url" content="https://tempertantrums.co.uk/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Temper Tantrums">
-<meta property="og:locale" content="en_GB">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="geo.region" content="GB-WSM">
-<meta name="geo.placename" content="Marylebone, London">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Wonder Collabs</title>
+<meta name="description" content="Invitations to our clients' restaurants, bars and launch parties — curated by The Wonder Agency for creators we work with.">
+<meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Josefin+Sans:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/tt.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+<style>
+:root{
+  --ground:#080808; --surface:#111110; --raise:#171716;
+  --line:#242320; --line-strong:#3a3833;
+  --ink:#f3efe6; --ink-2:#bdb7aa; --ink-3:#847f75;
+  --gold:#b69a5b; --gold-bright:#dcc07c; --gold-dim:#6f5d38;
+  --display:"Cormorant Garamond","Times New Roman",Georgia,serif;
+  --sans:"Jost","Futura","Helvetica Neue",Arial,sans-serif;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{color-scheme:dark;scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+/* film grain over everything, very faint */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.06;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
 
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BarOrPub","name":"Temper Tantrums","telephone":"+44 20 3879 0630","alternateName":"Temper Tantrums Café & Wine Bar",
-"description":"Café by day, wine & cocktail bar by night. Italian at heart with Asian accents.",
-"url":"https://tempertantrums.co.uk","image":"https://tempertantrums.co.uk/img/venue-bar.jpg",
-"hasMenu":"https://tempertantrums.co.uk/menu/","servesCuisine":["Italian","Asian fusion"],
-"address":{"@type":"PostalAddress","streetAddress":"94 Wimpole Street","addressLocality":"London","postalCode":"W1G 0EH","addressCountry":"GB"},
-"sameAs":["https://www.instagram.com/temper.tantrums.london"],
-"geo":{"@type":"GeoCoordinates","latitude":51.5204,"longitude":-0.1484},
- "openingHoursSpecification":[
- {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"23:00"},
- {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"00:00"},
- {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"08:00","closes":"20:00"}],
-"priceRange":"££","currenciesAccepted":"GBP",
-"acceptsReservations":"https://www.opentable.com/r/temper-tantrums-london",
-"menu":"https://tempertantrums.co.uk/menu/",
-"potentialAction":{"@type":"ViewAction","target":"https://tempertantrums.co.uk/menu/","name":"View menus"},
-"keywords":"café Marylebone, wine bar Marylebone, cocktail bar Wimpole Street, Italian small plates London, matcha tiramisu London, private hire Marylebone"}
-</script>
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:min(88vh,820px);display:grid;align-content:end;padding:150px 0 clamp(40px,6vw,72px);isolation:isolate}
+.hero .bg{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:70% 50%;transform:scale(1.06);animation:drift 22s ease-out forwards;filter:saturate(.9) brightness(.85)}
+@keyframes drift{to{transform:scale(1)}}
+.hero .bg::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(8,8,8,.55) 0%,rgba(8,8,8,.15) 35%,rgba(8,8,8,.75) 78%,var(--ground) 100%),
+  linear-gradient(90deg,rgba(8,8,8,.78) 20%,rgba(8,8,8,.35) 55%,transparent 80%)}
+.top{position:absolute;top:0;left:0;right:0;z-index:2}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:28px}
+.top img{height:36px;width:auto;filter:drop-shadow(0 2px 8px rgba(0,0,0,.5))}
+.top .who{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-2)}
+.eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+.hero h1{font-family:var(--display);font-weight:300;font-size:clamp(46px,7.6vw,96px);line-height:.98;letter-spacing:-.012em;margin:20px 0 26px;max-width:13ch;text-wrap:balance;text-shadow:0 2px 30px rgba(0,0,0,.5)}
+.hero h1 em{font-style:italic;color:var(--gold-bright)}
+.lede{max-width:54ch;color:var(--ink-2);font-size:17px;margin:0 0 34px}
+.lede strong{font-weight:400;color:var(--ink)}
+.hero .row{display:flex;flex-wrap:wrap;gap:16px 36px;align-items:center}
+.hero .row small{color:var(--ink-3);font-size:12px;letter-spacing:.06em}
+.hero .row small::before{content:"— ";color:var(--gold-dim)}
+
+/* buttons */
+.btn{appearance:none;background:var(--gold);border:1px solid var(--gold);color:#0a0a0a;font-family:var(--sans);font-weight:400;font-size:12px;letter-spacing:.28em;text-transform:uppercase;padding:16px 26px 15px;border-radius:2px;cursor:pointer;text-decoration:none;transition:background .25s,color .25s,border-color .25s,box-shadow .25s;display:inline-flex;align-items:center;gap:14px}
+.btn::after{content:"→";font-family:var(--display);font-size:18px;line-height:0;transition:transform .25s}
+.btn:hover,.btn:focus-visible{background:var(--gold-bright);color:#0a0a0a;border-color:var(--gold-bright);outline:none;box-shadow:0 12px 40px -10px rgba(182,154,91,.7)}
+.btn:hover::after{transform:translateX(4px)}
+
+/* ---------- strip of what's on ---------- */
+.strips{display:grid;gap:28px;margin-top:-1px}
+.glabel{display:flex;align-items:baseline;gap:14px;padding:0 0 10px}
+.glabel span{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+.glabel small{color:var(--ink-3);font-size:12px;letter-spacing:.04em}
+.strip{display:grid;grid-template-columns:repeat(8,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.strip.events{grid-template-columns:1fr 1fr}
+.strip.events:has(> a:only-child){grid-template-columns:1fr}
+.strip.events a{grid-template-columns:120px 1fr;align-items:center;gap:18px}
+.strip.events img{height:120px}
+.strip.events b{font-size:24px}
+.strip a>div>small{display:block;color:var(--ink-3);font-size:12px;margin-top:4px;letter-spacing:.02em}
+.strip.events{position:relative}
+.strip.events a::before{content:"Event";position:absolute;top:10px;right:10px;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#0a0a0a;background:var(--gold);padding:4px 8px 3px;border-radius:2px}
+.strip a{position:relative}
+.strip a{display:grid;gap:12px;align-content:start;padding:14px 16px 18px;background:var(--ground);text-decoration:none;transition:background .25s}
+.strip a:hover{background:var(--surface)}
+.strip img{width:100%;height:120px;object-fit:cover;border-radius:1px;transition:filter .3s}
+.strip a:hover img{filter:brightness(1.15)}
+.strip b{display:block;font-family:var(--display);font-weight:400;font-size:21px;line-height:1.1;color:var(--ink);margin-top:3px}
+.strip span{display:flex;align-items:flex-end;min-height:2.6em;font-size:10px;letter-spacing:.16em;line-height:1.3;text-transform:uppercase;color:var(--gold)}
+.strip.events span{min-height:0}
+.strip b .new{display:inline-block}
+
+/* ---------- section title ---------- */
+.rule{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;padding:clamp(56px,8vw,104px) 0 clamp(20px,3vw,32px)}
+.rule .big{font-family:var(--display);font-weight:300;font-size:clamp(38px,5.5vw,68px);line-height:1;margin:14px 0 0;letter-spacing:-.01em}
+.rule .big em{font-style:italic;color:var(--gold-bright)}
+.rule .count{font-family:var(--display);font-style:italic;color:var(--ink-3);font-size:20px;white-space:nowrap}
+
+/* ---------- opportunities ---------- */
+.op{scroll-margin-top:24px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px clamp(32px,5vw,80px);padding:clamp(40px,6vw,80px) 0;border-top:1px solid var(--line);align-items:center}
+.op.flip .pic{order:2}
+.pic{position:relative;aspect-ratio:4/5;margin:0;min-height:420px}
+.pic::before{content:"";position:absolute;inset:0;border:1px solid var(--gold-dim);transform:translate(14px,14px);pointer-events:none;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.pic .img{position:absolute;inset:0;overflow:hidden;background:var(--surface)}
+.pic .img::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,transparent 28%,transparent 70%,rgba(0,0,0,.55) 100%)}
+.pic img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1);filter:saturate(.92)}
+.op:hover .pic img{transform:scale(1.045)}
+.op:hover .pic::before{transform:translate(20px,20px)}
+.pic figcaption{position:absolute;left:18px;bottom:16px;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--ink-2);text-shadow:0 1px 6px rgba(0,0,0,.8)}
+.pic .ribbon{position:absolute;top:22px;right:0;z-index:3;background:var(--gold);color:#0a0a0a;font-size:10px;letter-spacing:.26em;text-transform:uppercase;font-weight:500;padding:9px 16px 8px 18px;clip-path:polygon(8px 0,100% 0,100% 100%,8px 100%,0 50%)}
+.copy .tag.event{background:var(--gold);color:#0a0a0a;border-color:var(--gold);font-weight:500}
+.pic .num{position:absolute;top:-14px;left:-6px;font-family:var(--display);font-style:italic;font-size:64px;line-height:1;color:var(--gold);text-shadow:0 2px 20px rgba(0,0,0,.6);z-index:2}
+.copy .meta{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-3);margin-bottom:18px}
+.copy .tag.new,.strip .new{background:var(--gold);color:#0a0a0a;border-color:var(--gold);font-weight:500}
+.strip .new{display:inline-block;font-size:9px;letter-spacing:.2em;padding:3px 6px 2px;border-radius:2px;margin-left:8px;vertical-align:middle}
+.copy .tag{color:var(--gold);border:1px solid var(--gold-dim);padding:6px 10px 5px;border-radius:2px;letter-spacing:.22em}
+.copy .venue{color:var(--ink);font-weight:400;letter-spacing:.08em}
+.copy h2{font-family:var(--display);font-weight:300;font-size:clamp(36px,4.6vw,58px);line-height:1.02;margin:0 0 18px;letter-spacing:-.008em;text-wrap:balance}
+.copy h2 em{font-style:italic;color:var(--gold-bright)}
+.copy p{margin:0 0 14px;color:var(--ink-2);max-width:58ch}
+.facts{margin:26px 0 26px;padding:0;list-style:none;display:grid}
+.facts li{display:grid;grid-template-columns:104px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--line);font-size:14px}
+.facts li:last-child{border-bottom:1px solid var(--line)}
+.facts .k{color:var(--ink-3);font-size:11px;letter-spacing:.22em;text-transform:uppercase;padding-top:3px}
+.facts .v{color:var(--ink-2)}
+.facts .v b{font-weight:400;color:var(--ink)}
+.dl-link{color:var(--gold-bright);text-decoration:none;border-bottom:1px solid var(--gold-dim)}
+.dl-link:hover{border-color:var(--gold-bright)}
+.cta{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center}
+.cta small{color:var(--ink-3);font-size:12px;letter-spacing:.04em}
+
+/* ---------- how it works ---------- */
+.deal{position:relative;margin:clamp(32px,5vw,56px) 0 0;padding:clamp(48px,7vw,88px) 0;border-top:1px solid var(--line-strong);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px clamp(32px,6vw,96px)}
+.deal::before{content:"";position:absolute;left:50%;top:0;width:min(900px,120vw);height:100%;transform:translateX(-50%);background:radial-gradient(ellipse at 50% 0%,rgba(182,154,91,.10),transparent 60%);pointer-events:none}
+.deal h3{font-family:var(--display);font-weight:300;font-size:clamp(32px,3.8vw,46px);line-height:1.06;margin:12px 0 0;text-wrap:balance}
+.deal h3 em{font-style:italic;color:var(--gold-bright)}
+.deal ol{margin:0;padding:0;list-style:none;counter-reset:s;display:grid}
+.deal li{counter-increment:s;display:grid;grid-template-columns:48px 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--line);color:var(--ink-2);font-size:15px}
+.deal li:last-child{border-bottom:1px solid var(--line)}
+.deal li::before{content:counter(s,decimal-leading-zero);font-family:var(--display);font-style:italic;font-size:26px;color:var(--gold);line-height:1;padding-top:1px}
+.deal li b{font-weight:400;color:var(--ink);display:block;margin-bottom:2px}
+.deal li b.in{display:inline;margin:0}
+
+/* ---------- deliverables ---------- */
+.deliv{margin:clamp(48px,8vw,96px) 0 0;padding:clamp(48px,7vw,88px) 0 0;border-top:1px solid var(--line-strong);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px clamp(32px,6vw,96px)}
+.deliv h3{font-family:var(--display);font-weight:300;font-size:clamp(32px,3.8vw,46px);line-height:1.06;margin:12px 0 0;text-wrap:balance}
+.deliv h3 em{font-style:italic;color:var(--gold-bright)}
+.deliv .dnote{color:var(--ink-3);font-size:14px;margin:16px 0 0;max-width:36ch}
+.deliv ol{margin:0;padding:0;list-style:none;counter-reset:d;display:grid}
+.deliv li{counter-increment:d;display:grid;grid-template-columns:48px 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--line);color:var(--ink-2);font-size:15px}
+.deliv li:last-child{border-bottom:1px solid var(--line)}
+.deliv li::before{content:counter(d,decimal-leading-zero);font-family:var(--display);font-style:italic;font-size:26px;color:var(--gold);line-height:1;padding-top:1px}
+.deliv li b{font-weight:400;color:var(--ink);display:block;margin-bottom:2px}
+.howto{margin-top:12px;border:1px solid var(--line-strong);border-radius:2px;background:var(--surface)}
+.howto summary{cursor:pointer;padding:10px 14px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bright);list-style:none}
+.howto summary::before{content:"+ ";color:var(--gold-dim)}
+.howto[open] summary::before{content:"– "}
+.howto p{margin:0;padding:0 14px 12px;font-size:14px;color:var(--ink-2)}
+.howto p b{display:inline;color:var(--ink)}
+@media (max-width:860px){.deliv{grid-template-columns:1fr;gap:24px}}
+
+/* ---------- faq ---------- */
+.faq{margin-top:clamp(40px,6vw,72px);border-top:1px solid var(--line-strong);padding-top:clamp(36px,5vw,56px)}
+.faq dl{margin:24px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px 40px}
+.faq dt{font-family:var(--display);font-weight:400;font-size:22px;line-height:1.15;color:var(--ink);margin:0 0 8px}
+.faq dd{margin:0;color:var(--ink-2);font-size:14.5px;max-width:42ch}
+.faq a{color:var(--ink);text-decoration-color:var(--gold-dim)}
+
+.grp{font-family:var(--display);font-style:italic;font-size:20px;color:var(--gold-bright);margin:14px 0 -6px;padding-top:10px;border-top:1px solid var(--line)}
+.grp:first-of-type{margin-top:0;padding-top:0;border:0}
+.dates{display:grid;gap:12px;padding:16px;border:1px solid var(--line-strong);border-radius:2px;background:var(--raise)}
+.dates .f input,.dates .f select{background-color:var(--surface)}
+.dl{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.invites{display:grid;gap:8px}
+.inv{display:grid}
+.inv>input{position:absolute;opacity:0;width:0;height:0}
+.f .inv>label{cursor:pointer;display:flex;align-items:center;gap:12px;font-size:14px;letter-spacing:.02em;text-transform:none;color:var(--ink-2);border:1px solid var(--line-strong);padding:13px 14px;border-radius:2px;transition:all .2s;user-select:none}
+.inv>label::before{content:"";width:16px;height:16px;border:1px solid var(--ink-3);border-radius:2px;flex:none;transition:all .2s}
+.inv .new{background:var(--gold);color:#0a0a0a;font-weight:500}
+.f .inv>input:checked+label{border-color:var(--gold);color:var(--ink);background:rgba(182,154,91,.08)}
+.f .inv>input:checked+label::before{background:var(--gold);border-color:var(--gold);box-shadow:inset 0 0 0 3px var(--surface)}
+.f .inv>input:focus-visible+label{box-shadow:0 0 0 3px rgba(182,154,91,.35)}
+.inv .dates{border-top:0;margin-top:-1px;border-radius:0 0 2px 2px}
+.dl i{font-style:normal;color:var(--gold-dim);text-transform:none;letter-spacing:.06em;margin-left:6px}
+.f .sub{color:var(--ink-3);font-size:12px;margin:0;letter-spacing:0;text-transform:none}
+.facts .v small{display:block;color:var(--ink-2)}
+footer .tag{font-family:var(--display);font-style:italic;font-size:18px;color:var(--ink-2)}
+footer .follow{display:inline-block;margin-top:8px;font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bright);text-decoration:none;border-bottom:1px solid var(--gold-dim);padding-bottom:2px}
+footer .follow:hover{border-color:var(--gold-bright)}
+
+/* ---------- footer ---------- */
+footer{position:relative;margin-top:clamp(40px,6vw,80px);border-top:1px solid var(--line-strong);padding:40px 0 56px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px 40px;align-items:center;color:var(--ink-3);font-size:12px;letter-spacing:.06em}
+footer img{height:24px;opacity:.9}
+footer a{text-decoration:none;color:var(--ink-2)}
+footer a:hover{color:var(--gold-bright)}
+
+/* ---------- drawer ---------- */
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .3s;z-index:40}
+.scrim.on{opacity:1;pointer-events:auto}
+.sheet{position:fixed;top:0;right:0;height:100%;width:min(580px,100%);background:var(--surface);border-left:1px solid var(--line-strong);z-index:50;transform:translateX(102%);transition:transform .42s cubic-bezier(.2,.8,.2,1);overflow-y:auto;overscroll-behavior:contain}
+.sheet.on{transform:none}
+.sheet .cover{position:relative;height:180px;overflow:hidden}
+.sheet .cover img{width:100%;height:100%;object-fit:cover}
+.sheet .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,17,16,.2),var(--surface))}
+.sheet .in{padding:0 clamp(28px,5vw,44px) clamp(28px,5vw,44px);margin-top:-56px;position:relative}
+.sheet header{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:28px}
+.sheet header .eyebrow{margin-bottom:10px}
+.sheet h2{font-family:var(--display);font-weight:300;font-size:36px;line-height:1.04;margin:0;text-wrap:balance}
+.x{appearance:none;background:rgba(17,17,16,.6);border:1px solid var(--line-strong);color:var(--ink-2);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:18px;line-height:1;flex:none}
+.x:hover{border-color:var(--gold);color:var(--gold-bright)}
+form{display:grid;gap:18px}
+#dated{display:grid;gap:18px}
+.f{display:grid;gap:7px}
+.f label,.f legend{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3);padding:0}
+.f label i{font-style:normal;color:var(--gold-dim);margin-left:6px}
+.f input,.f select,.f textarea{width:100%;background:var(--raise);border:1px solid var(--line-strong);color:var(--ink);font:inherit;font-weight:300;font-size:15px;padding:13px 14px;border-radius:2px;transition:border-color .2s}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--gold)}
+.f select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--ink-3) 50%),linear-gradient(135deg,var(--ink-3) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 15px) 50%;background-size:5px 5px;background-repeat:no-repeat;padding-right:40px}
+.f textarea{min-height:88px;resize:vertical}
+.f input::placeholder,.f textarea::placeholder{color:var(--ink-3)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{cursor:pointer;font-size:12px;letter-spacing:.06em;text-transform:none;color:var(--ink-2);border:1px solid var(--line-strong);padding:9px 14px;border-radius:999px;transition:all .2s;user-select:none}
+.chips input{position:absolute;opacity:0;width:0;height:0}
+.chips input:checked+label{border-color:var(--gold);color:var(--gold-bright);background:rgba(182,154,91,.08)}
+.chips input:focus-visible+label{box-shadow:0 0 0 3px rgba(182,154,91,.35)}
+.agree{display:grid;grid-template-columns:18px 1fr;gap:12px;align-items:start;padding:14px;border:1px solid var(--line-strong);border-radius:2px;background:var(--raise)}
+.agree input{margin:3px 0 0;accent-color:var(--gold);width:16px;height:16px}
+.agree label{font-size:13px;color:var(--ink-2);line-height:1.5;text-transform:none;letter-spacing:0}
+.hint{color:var(--ink-3);font-size:12px;margin:0}
+.actions{display:grid;gap:12px;margin-top:8px}
+.actions .btn{justify-content:center}
+.done{display:none;text-align:center;padding:40px 0}
+.done.on{display:block}
+.done .mark{width:72px;margin:0 auto 24px}
+.done h3{font-family:var(--display);font-weight:300;font-size:36px;margin:0 0 12px;line-height:1.05}
+.done p{color:var(--ink-2);max-width:36ch;margin:0 auto 24px}
+.err{display:none;color:#e0a48a;font-size:13px;border:1px solid rgba(224,164,138,.35);padding:12px 14px;border-radius:2px}
+.err.on{display:block}
+body.locked{overflow:hidden}
+
+@media (max-width:1000px){.strip{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:860px){
+  .op,.deal{grid-template-columns:1fr;gap:28px}
+  .op.flip .pic{order:0}
+  .pic{aspect-ratio:4/5;min-height:0}
+  .strip,.strip.events{grid-template-columns:1fr 1fr}
+  .strip.events:has(> a:only-child){grid-template-columns:1fr}
+  .row2{grid-template-columns:1fr}
+  .hero{min-height:0;padding-top:140px}
+}
+@media (max-width:520px){.strip,.strip.events{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
 </head>
 <body>
-<a class="sr-only" href="#main">Skip to content</a>
-<nav class="nav" aria-label="Main">
+
+<header class="top"><div class="wrap">
+  <img src="mark.png" alt="The Wonder Agency">
+  <div class="who">Wonder Collabs · Autumn 2026</div>
+</div></header>
+
+<section class="hero">
+  <div class="bg"><img src="img/hero.jpg" alt=""></div>
   <div class="wrap">
-    <a class="mark" href="/" aria-label="Temper Tantrums home"><svg class="icon-t" viewBox="0 0 180 220" aria-hidden="true" focusable="false"><use href="/assets/sprite.svg#icon-t" width="180" height="220"/></svg><span>Temper Tantrums</span></a>
-    <ul class="nav-links"><li><a href="/menu/">Menus</a></li><li><a href="/brunch/">Brunch</a></li><li><a href="/events/">Private Hire</a></li><li><a href="/christmas/" class="nav-xmas">Christmas</a></li><li><a href="/space/">The Space</a></li><li><a href="/find-us/">Find Us</a></li></ul>
-    <div class="nav-right">
-      <a class="btn btn-gold nav-book" href="https://www.opentable.com/r/temper-tantrums-london" target="_blank" rel="noopener">Book a table</a>
-      <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
-    </div>
+    <div class="eyebrow">Creator invitations · The Wonder Agency</div>
+    <h1>Our favourite places. <em>Our favourite creators.</em></h1>
+    <p class="lede">We look after some brilliant restaurants and bars across London — and we're inviting some of our favourite creators to experience them. Choose an invitation below, bring a plus one and enjoy everything listed <strong>on us</strong>, in exchange for a little content about your visit.</p>
+    <p class="lede">Invitations are limited, so request the ones you want while they're available. We'll check availability with the venue and confirm everything by email.</p>
+    <div class="row"><a class="btn" href="#whats-on">See the invitations</a><small>Nine invitations available</small><small>Takes about a minute to request</small></div>
   </div>
-</nav>
-<div class="drawer" id="drawer">
-  <ul><li><a href="/">Home</a></li><li><a href="/menu/">Menus</a></li><li><a href="/brunch/">Brunch</a></li><li><a href="/events/">Private Hire</a></li><li><a href="/christmas/">Christmas</a></li><li><a href="/space/">The Space</a></li><li><a href="/find-us/">Find Us</a></li></ul>
-  <svg class="flourish" viewBox="0 0 202 27" aria-hidden="true" focusable="false"><use href="/assets/sprite.svg#flourish" width="202" height="27"/></svg>
-  <div class="drawer-meta">94 Wimpole Street, Marylebone<br>Mon&ndash;Fri 8am&ndash;11pm &middot; Sat 8am&ndash;midnight &middot; Sun 8am&ndash;8pm<br><a href="tel:+442038790630">020 3879 0630</a> &middot; <a href="https://instagram.com/temper.tantrums.london" target="_blank" rel="noopener">@temper.tantrums.london</a></div>
+</section>
+
+<div class="wrap">
+  <nav class="strips" aria-label="Jump to an invitation">
+    <div class="group">
+      <div class="glabel"><span>Events</span><small>Fixed dates · limited places</small></div>
+      <div class="strip events">
+        <a href="#notto"><img src="img/notto.jpg" alt=""><div><span>Relaunch party</span><b>Notto Piccadilly</b><small>New date coming soon · with Phil Howard</small></div></a>
+      </div>
+    </div>
+    <div class="group">
+      <div class="glabel"><span>Experiences</span><small>Book a visit that suits you</small></div>
+      <div class="strip">
+        <a href="#tantrumsdine"><img src="img/tantrums.jpg" alt=""><div><span>Breakfast · lunch · dinner</span><b>Temper Tantrums<span class="new">New</span></b></div></a>
+        <a href="#tantrumsbrunch"><img src="img/tantrums-brunch.jpg" alt=""><div><span>Bottomless brunch</span><b>Temper Tantrums<span class="new">New</span></b></div></a>
+        <a href="#temper"><img src="img/temper.jpg" alt=""><div><span>Lobster brunch · City only</span><b>Temper</b></div></a>
+        <a href="#paradiso"><img src="img/paradiso.jpg" alt=""><div><span>Bottomless brunch</span><b>Paradiso</b></div></a>
+        <a href="#brix"><img src="img/brix.jpg" alt=""><div><span>Dinner · roast</span><b>BRIX LDN</b></div></a>
+        <a href="#nottodine"><img src="img/nottodine.jpg" alt=""><div><span>Lunch · dinner</span><b>Notto</b></div></a>
+        <a href="#kasakin"><img src="img/kasakin.jpg" alt=""><div><span>Feast</span><b>Kasa &amp; Kin</b></div></a>
+        <a href="#centanni"><img src="img/centanni.jpg" alt=""><div><span>Lunch · dinner</span><b>Cent Anni</b></div></a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="rule" id="whats-on">
+    <div><div class="eyebrow">You're invited</div><h2 class="big">Pick your <em>next visit.</em></h2></div>
+    <div class="count">Choose → Request → We confirm → You visit → You share</div>
+  </div>
+
+  <!-- Tantrums -->
+  <article class="op" id="tantrumsdine">
+    <figure class="pic"><span class="num">I</span><div class="img"><img src="img/tantrums.jpg" alt="Temper Tantrums, Wimpole Street"></div><figcaption>Temper Tantrums · Marylebone</figcaption></figure>
+    <div class="copy">
+      <div class="meta"><span class="tag new">New</span><span class="tag">Breakfast · lunch · dinner</span><span class="venue">Temper Tantrums</span><span>Marylebone</span></div>
+      <h2>Temper Tantrums, <em>morning to night.</em></h2>
+      <p>The newest opening from the team behind Temper and Paradiso: a coffee and wine bar on Wimpole Street. Italian at heart with Asian accents — flatbreads, charcuterie, tasting plates, a serious wine list and a matcha tiramisu you'll want on camera.</p>
+      <p>Come for coffee, pastries and breakfast, a long lunch, or a wine-led dinner with a plus one, and show people what Marylebone's newest room is all about.</p>
+      <ul class="facts">
+        <li><span class="k">Where</span><span class="v">Temper Tantrums · 94 Wimpole Street, Marylebone W1</span></li>
+        <li><span class="k">When</span><span class="v"><b>Breakfast</b> · any day, 08:00–12:00<small><b>Lunch</b> · any day, 12:00–15:00</small><small><b>Dinner</b> · Monday–Saturday, from 17:30</small></span></li>
+        <li><span class="k">Your invite</span><span class="v">Breakfast, or lunch or dinner with wine, for you and a plus one</span></li>
+        <li><span class="k">In return</span><span class="v">Our four deliverables — <a href="#deliverables" class="dl-link">see what we ask for</a></span></li>
+      </ul>
+      <div class="cta"><button class="btn" data-op="tantrumsdine">Request a table</button><small>Pick breakfast, lunch or dinner, a date and a time</small></div>
+    </div>
+  </article>
+
+  <!-- II -->
+  <!-- Tantrums brunch -->
+  <article class="op flip" id="tantrumsbrunch">
+    <figure class="pic"><span class="num">II</span><div class="img"><img src="img/tantrums-brunch.jpg" alt="Temper Tantrums, Wimpole Street"></div><figcaption>Temper Tantrums · Marylebone</figcaption></figure>
+    <div class="copy">
+      <div class="meta"><span class="tag new">New</span><span class="tag">Bottomless brunch</span><span class="venue">Temper Tantrums</span><span>Marylebone</span></div>
+      <h2>Three courses, <em>90 minutes bottomless.</em></h2>
+      <p>Make your Sunday a little more indulgent with bottomless brunch at Temper Tantrums. Three courses alongside 90 minutes of bottomless drinks — prosecco, selected wines, beers, Aperol Spritz and margaritas. Bring a plus one, settle in and let them take care of brunch.</p>
+      <p>Start with burrata and miso honey or a trio of butters with baked pinsa romana, move on to pinsa topped with prosciutto and camembert di bufala or a creamy mushroom pasta, and finish with matcha tiramisu or cannoli. Very filmable, all of it.</p>
+      <ul class="facts">
+        <li><span class="k">Where</span><span class="v">Temper Tantrums · 94 Wimpole Street, Marylebone W1</span></li>
+        <li><span class="k">When</span><span class="v"><b>Sundays</b> · any time from 12:00</span></li>
+        <li><span class="k">Your invite</span><span class="v">Starter, main &amp; dessert + 90 minutes of bottomless drinks for two<small>Aperol Spritz, prosecco, margaritas, beers, white, red or rosé</small></span></li>
+        <li><span class="k">In return</span><span class="v">Our four deliverables — <a href="#deliverables" class="dl-link">see what we ask for</a></span></li>
+      </ul>
+      <div class="cta"><button class="btn" data-op="tantrumsbrunch">Request a brunch</button><small>Pick your Sunday and a time from 12:00</small></div>
+    </div>
+  </article>
+
+  <article class="op" id="temper">
+    <figure class="pic"><span class="num">III</span><div class="img"><img src="img/temper.jpg" alt="Bottomless brunch at Temper"></div><figcaption>Lobster brunch · Temper City only</figcaption></figure>
+    <div class="copy">
+      <div class="meta"><span class="tag">Bottomless brunch</span><span class="venue">Temper</span><span>City or Soho</span></div>
+      <h2>Bottomless brunch, <em>City or Soho.</em></h2>
+      <p>Two Temper brunches, two moods — both on Saturdays with 90 minutes of bottomless drinks for you and a plus one.</p>
+      <p><b>Temper City</b>, by Bank, is the lobster brunch: freshly shucked oysters, surf &amp; turf and half a grilled Cornish lobster. <b>Temper Soho</b>, on Broadwick Street, is steak, tacos and smashed cheeseburgers.</p>
+      <p class="lobster-note" style="border-left:2px solid var(--gold);padding:10px 14px;background:rgba(182,154,91,.08);color:var(--ink)"><b>Lobster is only at Temper City.</b> The Soho brunch doesn't include lobster — if that's what you're coming for, choose City when you request.</p>
+      <ul class="facts">
+        <li><span class="k">Where</span><span class="v">Temper City · Angel Court EC2<small>Temper Soho · Broadwick Street W1</small></span></li>
+        <li><span class="k">When</span><span class="v"><b>Saturdays</b> · City 12:00–16:00<small>Soho 12:00–15:30</small></span></li>
+        <li><span class="k">Your invite</span><span class="v"><b>City:</b> lobster &amp; steak surf &amp; turf + 90 minutes bottomless for two<small><b>Soho:</b> steak, tacos &amp; burgers + 90 minutes bottomless for two (no lobster)</small></span></li>
+        <li><span class="k">In return</span><span class="v">Our four deliverables — <a href="#deliverables" class="dl-link">see what we ask for</a></span></li>
+      </ul>
+      <div class="cta"><button class="btn" data-op="temper">Request a brunch</button><small>Lobster? Choose City · Soho is steak, tacos &amp; burgers</small></div>
+    </div>
+  </article>
+
+  <!-- III -->
+  <article class="op flip" id="paradiso">
+    <figure class="pic"><span class="num">IV</span><div class="img"><img src="img/paradiso.jpg" alt="Bottomless brunch at Paradiso"></div><figcaption>Paradiso · Covent Garden</figcaption></figure>
+    <div class="copy">
+      <div class="meta"><span class="tag">Bottomless brunch</span><span class="venue">Paradiso</span><span>Covent Garden</span></div>
+      <h2>Brunch with <em>bottomless cocktails.</em></h2>
+      <p>Weekend brunch, Paradiso style. Choose one large plate or two small plates each, then settle in for 90 minutes of bottomless cocktails, beer and wine.</p>
+      <p>Bring a plus one, any Saturday or Sunday — just tell us the date and time that suits.</p>
+      <ul class="facts">
+        <li><span class="k">Where</span><span class="v">Paradiso · Covent Garden</span></li>
+        <li><span class="k">When</span><span class="v"><b>Every Saturday &amp; Sunday</b> · 12:00–16:00</span></li>
+        <li><span class="k">Your invite</span><span class="v">Brunch + 90 minutes of bottomless cocktails, beer and wine for two</span></li>
+        <li><span class="k">In return</span><span class="v">Our four deliverables — <a href="#deliverables" class="dl-link">see what we ask for</a></span></li>
+      </ul>
+      <div class="cta"><button class="btn" data-op="paradiso">Request a brunch</button><small>Pick your date and a time</small></div>
+    </div>
+  </article>
+
+  <!-- IV -->
+  <article class="op" id="brix">
+    <figure class="pic"><span class="num">V</span><div class="img"><img src="img/brix.jpg" alt="The BRIX board"></div><figcaption>BRIX LDN · London Bridge</figcaption></figure>
+    <div class="copy">
+      <div class="meta"><span class="tag">Dinner · brunch · Sunday roast</span><span class="venue">BRIX LDN</span><span>London Bridge</span></div>
+      <h2>Your choice: <em>dinner, brunch or roast.</em></h2>
+      <p>BRIX is all about smoke, fire, big flavours and very good cocktails. And we're giving you three ways to experience it.</p>
+      <p>Come for dinner and get stuck into the BRIX sharing board, flame-grilled meats and cocktails. Make it weekend brunch for chicken &amp; waffles with hot honey, short rib &amp; eggs and more. Or spend Sunday around the table with smoky meats, all the trimmings and a proper Sunday roast.</p>
+      <p>You choose. We'll host you and a plus one.</p>
+      <ul class="facts">
+        <li><span class="k">Where</span><span class="v">BRIX LDN · London Bridge SE1</span></li>
+        <li><span class="k">When</span><span class="v"><b>Dinner</b> · any evening<small><b>Brunch</b> · Saturdays &amp; Sundays, 10:00–14:00</small><small><b>Sunday roast</b> · Sundays, 12:00–18:00</small></span></li>
+        <li><span class="k">Your invite</span><span class="v">Your chosen experience for two — three courses and cocktails at dinner, or brunch, or the Sunday roast, with drinks</span></li>
+        <li><span class="k">In return</span><span class="v">Our four deliverables — <a href="#deliverables" class="dl-link">see what we ask for</a></span></li>
+      </ul>
+      <div class="cta"><button class="btn" data-op="brix">Choose your BRIX experience</button><small>Dinner, brunch or Sunday roast</small></div>
+    </div>
+  </article>
+
+  <!-- V -->
+  <article class="op flip" id="notto">
+    <figure class="pic"><span class="num">VI</span><span class="ribbon">Event · New date TBC</span><div class="img"><img src="img/notto.jpg" alt="Pasta at Notto Piccadilly"></div><figcaption>Notto · Piccadilly</figcaption></figure>
+    <div class="copy">
+      <div class="meta"><span class="tag event">Event</span><span class="tag">Relaunch party</span><span class="venue">Notto</span><span>Piccadilly</span></div>
+      <h2>A new look for <em>Notto Piccadilly.</em></h2>
+      <p>The scaffolding is finally coming down. To celebrate the return of Notto Piccadilly's beautiful exterior, we're throwing a relaunch party at the flagship restaurant in the heart of Piccadilly. The date has moved — we're locking in the new one now, and everyone who requests an invite will be the first to hear.</p>
+      <p>Join Michelin-starred chef and co-founder Phil Howard for an evening of brilliant pasta, drinks and a few surprises. Bring a plus one and celebrate the new chapter with us.</p>
+      <ul class="facts">
+        <li><span class="k">Where</span><span class="v">Notto · Piccadilly W1</span></li>
+        <li><span class="k">When</span><span class="v"><b>New date to be confirmed</b> · request now and we'll email you the moment it's set</span></li>
+        <li><span class="k">Your invite</span><span class="v">Dinner + drinks for you and a plus one</span></li>
+        <li><span class="k">In return</span><span class="v">Our four deliverables — <a href="#deliverables" class="dl-link">see what we ask for</a></span></li>
+      </ul>
+      <div class="cta"><button class="btn" data-op="notto">Request an invite</button><small>Date TBC · you'll be first to know</small></div>
+    </div>
+  </article>
+
+  <!-- Notto dining -->
+  <article class="op" id="nottodine">
+    <figure class="pic"><span class="num">VII</span><div class="img"><img src="img/nottodine.jpg" alt="Fresh pasta at Notto"></div><figcaption>Notto · Piccadilly &amp; Covent Garden</figcaption></figure>
+    <div class="copy">
+      <div class="meta"><span class="tag">Lunch · dinner</span><span class="venue">Notto</span><span>Piccadilly · Covent Garden</span></div>
+      <h2>Fresh pasta at Notto, <em>whenever suits.</em></h2>
+      <p>Can't make the relaunch, or just want a proper sit-down with Phil Howard's pasta? Notto is opening its doors to you and a plus one any day of the week, lunch or dinner.</p>
+      <p>Hand-made pasta, the kind of plates that stop a scroll, and a glass or two to go with them. Choose your restaurant and tell us when suits.</p>
+      <ul class="facts">
+        <li><span class="k">Where</span><span class="v">Notto · Piccadilly or Covent Garden</span></li>
+        <li><span class="k">When</span><span class="v"><b>Any day</b> · lunch or dinner — you choose</span></li>
+        <li><span class="k">Your invite</span><span class="v">Starters, pasta and drinks for two</span></li>
+        <li><span class="k">In return</span><span class="v">Our four deliverables — <a href="#deliverables" class="dl-link">see what we ask for</a></span></li>
+      </ul>
+      <div class="cta"><button class="btn" data-op="nottodine">Request a table</button><small>Pick your date and a time</small></div>
+    </div>
+  </article>
+
+  <!-- VI -->
+  <article class="op flip" id="kasakin">
+    <figure class="pic"><span class="num">VIII</span><div class="img"><img src="img/kasakin.jpg" alt="Kasa &amp; Kin"></div><figcaption>Kasa &amp; Kin · Soho</figcaption></figure>
+    <div class="copy">
+      <div class="meta"><span class="tag">Filipino feast</span><span class="venue">Kasa &amp; Kin</span><span>Soho</span></div>
+      <h2>London's home of ube, <em>on us.</em></h2>
+      <p>London's Home of Ube is inviting you down for a Filipino feast to remember. From sizzling pork sisig to ube cocktails and everything in between, Kasa &amp; Kin really has it all.</p>
+      <p>Enjoy a three-course meal of your choosing and an ube cocktail each, for you and a plus one. The team would love you to champion two things in particular: their ube offering and the sizzle and grill dishes on the menu — so make those the stars of your visit.</p>
+      <ul class="facts">
+        <li><span class="k">Where</span><span class="v">Kasa &amp; Kin · Soho</span></li>
+        <li><span class="k">When</span><span class="v"><b>Any day</b> · lunch or dinner</span></li>
+        <li><span class="k">Your invite</span><span class="v">Three courses + an ube cocktail each, for two</span></li>
+        <li><span class="k">In return</span><span class="v">Our four deliverables — <a href="#deliverables" class="dl-link">see what we ask for</a></span></li>
+      </ul>
+      <div class="cta"><button class="btn" data-op="kasakin">Request a table</button><small>Pick your date and a time</small></div>
+    </div>
+  </article>
+
+  <!-- VII -->
+  <article class="op" id="centanni">
+    <figure class="pic"><span class="num">IX</span><div class="img"><img src="img/centanni.jpg" alt="Cent Anni"></div><figcaption>Cent Anni · St John's Wood &amp; Wimbledon Village</figcaption></figure>
+    <div class="copy">
+      <div class="meta"><span class="tag">Lunch · roast · dinner</span><span class="venue">Cent Anni</span><span>St John's Wood · Wimbledon Village</span></div>
+      <h2>Italian, <em>your way.</em></h2>
+      <p>With two lovely locations in St John's Wood and Wimbledon Village, Cent Anni is an idyllic Italian restaurant for mid-week set lunches, Sunday roasts and cosy evening meals.</p>
+      <p>Choose your restaurant and your dining option — set lunch, Sunday roast or dinner — and we'll get you booked in for you and a plus one. The Sunday roast is St John's Wood only.</p>
+      <ul class="facts">
+        <li><span class="k">Where</span><span class="v">Cent Anni · St John's Wood or Wimbledon Village</span></li>
+        <li><span class="k">When</span><span class="v"><b>Set lunch</b> · Monday–Friday<small><b>Sunday roast</b> · Sundays, St John's Wood only</small><small><b>Dinner</b> · any evening</small></span></li>
+        <li><span class="k">Your invite</span><span class="v">Your chosen meal with drinks, for two</span></li>
+        <li><span class="k">In return</span><span class="v">Our four deliverables — <a href="#deliverables" class="dl-link">see what we ask for</a></span></li>
+      </ul>
+      <div class="cta"><button class="btn" data-op="centanni">Choose your Cent Anni visit</button><small>Set lunch, Sunday roast or dinner</small></div>
+    </div>
+  </article>
+
+  <section class="deliv" id="deliverables">
+    <div><div class="eyebrow">What we ask for</div><h3>Four deliverables, <em>every visit.</em></h3>
+      <p class="dnote">The same for all nine invitations. Please share everything within 7 days of your visit and send Ciara the links.</p></div>
+    <ol>
+      <li><div><b>A reel or a carousel</b>One or the other — your call. Tell us which when you request. No copyrighted music on the reel (see 4).</div></li>
+      <li><div><b>Stories on the day</b>A few stories while you're there, tagging the venue.</div></li>
+      <li><div><b>Add the venue as a collaborator</b>On the reel or carousel, use Instagram's <em>Invite collaborator</em> so it appears on the venue's profile too. We'll send the handle with your confirmation.</div></li>
+      <li><div><b>Share a partnership ad code</b>We'd love to put a little spend behind your content so more people see it. To do that we need the ad code from your reel or carousel — and Instagram won't allow boosted content with copyrighted music, so please use original or royalty-free audio.
+        <details class="howto"><summary>How to get the ad code</summary>
+          <p><b>On a post you've already shared:</b> open it from your profile → tap the three dots (top right) → <em>Partnership label &amp; ads</em> → turn on <em>Get partnership ad code</em> → tap <em>Copy</em>, or <em>Share</em> to DM it to us.</p>
+          <p><b>While creating:</b> before you post, tap <em>Partnership label &amp; ads</em> (for stories, the label icon at the top) → turn on <em>Get partnership ad code</em> → share as normal. Once it's live, copy the code or share it with us.</p>
+          <p>You can turn the toggle off at any time to stop new ads being made; anything already running carries on.</p>
+        </details></div></li>
+    </ol>
+  </section>
+
+  <section class="deal">
+    <div><div class="eyebrow">How it works</div><h3>From invitation to table <em>in four steps.</em></h3></div>
+    <ol>
+      <li><div><b>Choose</b>Find the invitations you'd like to experience, tick as many as you want, give us a date and time for each visit (at least a week ahead), and hit request.</div></li>
+      <li><div><b>We confirm</b>We'll check your date with the venue and email you to confirm — or offer an alternative if it's full. Your visit isn't booked until you receive our confirmation email.</div></li>
+      <li><div><b>Enjoy</b>Turn up with your plus one and enjoy everything included in your invitation — it's on us. If you order anything outside the invitation, you'll just pay for that separately.</div></li>
+      <li><div><b>Share</b>The four deliverables above — reel or carousel, stories, venue added as collaborator, ad code — within 7 days. We'll include the handles and details in your confirmation.</div></li>
+    </ol>
+  </section>
+
+  <section class="faq">
+    <div class="eyebrow">Good to know</div>
+    <dl>
+      <div><dt>Is everything complimentary?</dt><dd>Yes. Everything listed under Your Invite is covered for you and your plus one. Anything additional you order is yours to pay for.</dd></div>
+      <div><dt>Why do you need an ad code?</dt><dd>So we can put a small budget behind your post and get it in front of more people — it runs from the venue's account with your name on it, and you keep full control of the toggle. It just means no copyrighted music on the reel.</dd></div>
+      <div><dt>Can I request more than one invitation?</dt><dd>Absolutely — tick as many as you like on the form. Each one is confirmed separately, and because places are limited we can't guarantee every request.</dd></div>
+      <div><dt>Is my visit booked when I submit the form?</dt><dd>Not yet. We check your date and time with the venue and email you to confirm, or offer an alternative if it's full. Please wait for our confirmation before making plans or contacting the venue.</dd></div>
+      <div><dt>What if I need to cancel?</dt><dd>Use your bookings page — the link is in every email we send you. You can move or cancel any booking there in a couple of taps, and the venue is told straight away. Please give at least 48 hours where you can, so we can offer the space to someone else.</dd></div>
+      <div><dt>How do I hear about the next ones?</dt><dd>Follow <a href="https://www.instagram.com/the.wonder.list/" target="_blank" rel="noopener">@the.wonder.list</a> on Instagram — new invitations go up there first.</dd></div>
+      <div><dt>Who should I contact?</dt><dd>Once confirmed, we'll send you everything you need for your visit. For anything else, email <a href="mailto:hello@thewonder.group">hello@thewonder.group</a>.</dd></div>
+    </dl>
+  </section>
+
+  <footer>
+    <div><img src="mark.png" alt="The Wonder Agency"></div>
+    <div class="tag">Great hospitality deserves to be talked about.<br><a class="follow" href="https://www.instagram.com/the.wonder.list/" target="_blank" rel="noopener">Follow @the.wonder.list for more invitations →</a></div>
+    <div>Questions? <a href="mailto:hello@thewonder.group">hello@thewonder.group</a><br>© 2026 The Wonder Agency · London</div>
+  </footer>
 </div>
-<main id="main">
-<section class="hero grain" id="top">
-  <video class="hero-video" autoplay muted loop playsinline poster="/img/opening-poster.jpg" preload="none">
-    <source data-src="/img/opening.mp4" type="video/mp4">
-  </video>
-  <div class="hero-shade" aria-hidden="true"></div>
-  <div class="wrap">
-    <svg class="logo" viewBox="0 0 210 145" aria-hidden="true" focusable="false"><use href="/assets/sprite.svg#logo" width="210" height="145"/></svg>
-    <h1>Caf&eacute; by day. <em>Wine &amp; cocktails</em> by night.</h1>
-    <p class="hero-sub">Italian small plates, serious wine and exceptional cocktails on Wimpole Street &mdash; five minutes from Oxford Circus, from the team behind Temper.</p>
-    <p class="mood-status" id="mood-status">Breakfast 8am &middot; Lunch 12pm &middot; Dinner 5pm</p>
-    <div class="btn-row">
-      <a class="btn btn-gold" id="cta-primary" href="https://www.opentable.com/r/temper-tantrums-london" target="_blank" rel="noopener">Book a table</a>
-      <a class="btn btn-ghost" id="cta-secondary" href="/menu/">View the menus</a>
-    </div>
-  </div>
-  <a class="scrolldown" href="#about" aria-label="Scroll down"></a>
-</section>
 
-<div class="tick" aria-hidden="true"><div class="tick-track" id="tick-track"></div></div>
+<!-- request drawer -->
+<div class="scrim" id="scrim"></div>
+<aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+  <div class="cover"><img id="cover-img" src="img/tantrums.jpg" alt=""></div>
+  <div class="in">
+    <header>
+      <div><div class="eyebrow">Request invitations · about a minute</div><h2 id="sheet-title">Which would you like to visit?</h2></div>
+      <button class="x" id="close" aria-label="Close">×</button>
+    </header>
 
-<section class="sec cream manifesto" id="about">
-  <div class="wrap mf-grid">
-    <figure class="mf-photo left polaroid tilt-l" data-reveal><img src="/img/venue-lounge.jpg" alt="Leather sofas and lamplight in the lounge" loading="lazy"><figcaption>Settle in</figcaption></figure>
-    <div class="mf-text">
-      <svg class="flourish-top" viewBox="0 0 102 22" aria-hidden="true" focusable="false"><use href="/assets/sprite.svg#flourish-top" width="102" height="22"/></svg>
-      <p class="eyebrow">What it is</p>
-      <p class="big" data-reveal>Italian at heart with Asian accents &mdash; an all-day neighbourhood spot with a <em>mischievous streak</em>.</p>
-      <p class="rest" data-reveal>Excellent coffee and fresh pastries in the morning; serious wines, exceptional cocktails and playful plates after dark. Set among an eclectic collection of art, objects and curiosities &mdash; relaxed, effortlessly assured and just a little badly behaved.</p>
-      <p class="tagline" data-reveal>Irreverent elegance with a taste for mischief.</p>
-    </div>
-    <figure class="mf-photo right polaroid tilt-r" data-reveal><img src="/img/venue-bar.jpg" alt="The bar past a vintage floral lamp" loading="lazy"><figcaption>Pull up a stool</figcaption></figure>
-  </div>
-</section>
-
-<section class="sec deep grain" id="day-night">
-  <div class="wrap">
-    <div class="sec-head center" data-reveal>
-      <p class="eyebrow">All day on Wimpole Street</p>
-      <h2>Two moods. <em>One address.</em></h2>
-    </div>
-    <div class="dn-grid">
-      <a class="dn-card day" href="/menu/#cafe" data-reveal>
-        <img src="/img/espresso-pink.jpg" alt="Espresso at Temper Tantrums" loading="lazy">
-        <span class="tag-time">From 8am</span>
-        <div class="dn-body"><p class="eyebrow" style="color:#fff">By day</p><h2>Caf&eacute;</h2><p>Excellent coffee, cornetti and breakfast bruschetta &mdash; then long lunches of cicchetti and pinsa.</p><span class="link-arrow">The caf&eacute; &amp; lunch menus</span></div>
-      </a>
-      <a class="dn-card night d1" href="/menu/#dinner" data-reveal>
-        <img src="/img/live-bartender.jpg" alt="A cocktail being poured at the bar" loading="lazy">
-        <span class="tag-time">From 5pm</span>
-        <div class="dn-body"><p class="eyebrow" style="color:var(--gold-lt)">By night</p><h2>Wine &amp; cocktails</h2><p>Serious wines, exceptional cocktails and playful plates as the lights go down.</p><span class="link-arrow">The dinner menu</span></div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="moment">
-  <img class="bg" data-parallax src="/img/exterior-crowd.jpg" alt="Guests gathered beneath the gold lettering of Temper Tantrums on Wimpole Street" loading="lazy">
-  <div class="wrap">
-    <p class="eyebrow">94 Wimpole Street, Marylebone</p>
-    <h2 data-reveal>Come for a coffee. <em>Stay until the lights go down.</em></h2>
-    <a class="link-arrow" href="/find-us/">Find us</a>
-  </div>
-</section>
-
-<section class="sec green grain">
-  <div class="wrap">
-    <div class="sec-head center" data-reveal>
-      <p class="eyebrow">The food</p>
-      <h2>Playful <em>plates</em></h2>
-      <p class="lede" style="color:rgba(255,255,255,.85)">Pinsa romana, crostini, salumi and pasta &mdash; Italian at heart, with a little Asian mischief in the seasoning.</p>
-    </div>
-    <div class="plates-row">
-      <a href="/menu/#lunch" style="text-decoration:none"><figure class="polaroid tilt-l" data-reveal><img src="/img/flatbread.jpg" alt="Pinsa romana with prosciutto, pesto and rocket" loading="lazy"><figcaption>Pinsa romana</figcaption></figure></a>
-      <a href="/menu/#dinner" style="text-decoration:none"><figure class="polaroid tilt-r" data-reveal><img src="/img/coppa.jpg" alt="Capocollo with rocket and parmesan" loading="lazy"><figcaption>Capocollo</figcaption></figure></a>
-      <a href="/menu/#dinner" style="text-decoration:none"><figure class="polaroid tilt-l2" data-reveal><img src="/img/paloma-green.jpg" alt="A cocktail at Temper Tantrums" loading="lazy"><figcaption>Cocktails</figcaption></figure></a>
-      <a href="/brunch/" style="text-decoration:none"><figure class="polaroid tilt-r2" data-reveal><img src="/img/tiramisu-dark.jpg" alt="Matcha tiramisu" loading="lazy"><figcaption>Matcha tiramisu</figcaption></figure></a>
-    </div>
-    <div class="btn-row" style="justify-content:center;margin-top:3.5rem"><a class="btn btn-gold" href="/menu/">See all the menus</a></div>
-  </div>
-</section>
-
-<section class="sec pinkbg brunch-f" id="brunch">
-  <div class="wrap bf-grid">
-    <div class="bf-text" data-reveal>
-      <p class="eyebrow">Every Sunday from 12pm</p>
-      <h2>Bottomless <em>brunch</em></h2>
-      <p class="lede">Three courses and 90 minutes of bottomless Aperol Spritz, prosecco, margaritas, wine and beer. Bring your friends, settle in and let us take care of brunch.</p>
-      <div class="chips"><div class="chip"><b>&pound;40</b><span>per person</span></div><div class="chip"><b>3</b><span>courses</span></div><div class="chip"><b>90</b><span>minutes bottomless</span></div></div>
-      <div class="btn-row"><a class="btn btn-dark" href="/brunch/">See the brunch menu</a><a class="btn btn-ghost" href="https://www.opentable.com/r/temper-tantrums-london" target="_blank" rel="noopener">Book Sunday</a></div>
-    </div>
-    <div class="bf-collage">
-      <figure class="polaroid p1 tilt-l" data-reveal><img src="/img/brunch-spritz.jpg" alt="Friends with Aperol Spritzes at Sunday brunch" loading="lazy"><figcaption>Spritz o&rsquo;clock</figcaption></figure>
-      <figure class="polaroid p2 tilt-r2" data-reveal><img src="/img/brunch-margaritas.jpg" alt="Margaritas raised for a toast" loading="lazy" style="object-position:50% 10%"><figcaption>Cheers to Sunday</figcaption></figure>
-      <div class="bf-sticker" aria-hidden="true"><div><b>90</b>mins<br>bottomless</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec ink grain" style="padding-bottom:clamp(4rem,8vw,6rem)">
-  <div class="wrap hire-head">
-    <div data-reveal>
-      <p class="eyebrow">Private hire &amp; parties</p>
-      <h2>The whole room, <em>yours</em></h2>
-    </div>
-    <div data-reveal>
-      <p class="lede">From a long table to a full takeover &mdash; cocktails flowing, plates for sharing and a room that was built for a party.</p>
-      <div class="chips"><div class="chip"><b>45</b><span>guests downstairs</span></div><div class="chip"><b>35</b><span>guests upstairs</span></div></div>
-      <div class="btn-row"><a class="btn btn-gold" href="/events/">Enquire about private hire</a><a class="btn btn-ghost" href="/christmas/">Christmas parties</a></div>
-    </div>
-  </div>
-  <div class="strip" aria-label="Parties at Temper Tantrums">
-    <figure><img src="/img/live-singer.jpg" alt="A singer performing in the bar" loading="lazy"></figure>
-    <figure class="wide"><img src="/img/live-band.jpg" alt="Live music at a party" loading="lazy"></figure>
-    <figure><img src="/img/bar-pour.jpg" alt="Cocktails poured at the bar while a guest films" loading="lazy"></figure>
-    <figure><img src="/img/live-sax.jpg" alt="A saxophonist beneath the rock and roll portraits" loading="lazy"></figure>
-    <figure class="wide"><img src="/img/venue-ceiling.jpg" alt="Chandeliers beneath a ceiling of rock and roll portraits" loading="lazy"></figure>
-  </div>
-  <div class="wrap">
-    <div class="steps">
-      <div data-reveal><span class="n">i.</span><h3>Tell us</h3><p>Your date, your numbers, the occasion &mdash; and how badly behaved you&rsquo;d like it.</p></div>
-      <div data-reveal><span class="n">ii.</span><h3>We build it</h3><p>Feasting menus, cocktails, the music and the room, shaped around your night.</p></div>
-      <div data-reveal><span class="n">iii.</span><h3>You take the credit</h3><p>You turn up with your people. We do the rest.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="finale">
-  <img class="bg" src="/img/venue-ceiling.jpg" alt="" loading="lazy">
-  <div class="wrap">
-    <svg class="flourish" viewBox="0 0 202 27" aria-hidden="true" focusable="false"><use href="/assets/sprite.svg#flourish" width="202" height="27"/></svg>
-    <h2 data-reveal style="margin-top:2rem">Come and lose your <em>temper</em></h2>
-    <a class="btn btn-gold" href="https://www.opentable.com/r/temper-tantrums-london" target="_blank" rel="noopener">Book a table</a>
-    <div class="quick"><a href="/menu/">Menus</a><a href="/brunch/">Sunday brunch</a><a href="/events/">Private hire</a><a href="/find-us/">Find us</a></div>
-  </div>
-</section>
-</main>
-<footer class="footer">
-  <div class="wrap">
-    <div class="f-top">
-      <div class="f-brand">
-        <a href="/" aria-label="Temper Tantrums home"><svg class="logo" viewBox="0 0 210 145" aria-hidden="true" focusable="false"><use href="/assets/sprite.svg#logo" width="210" height="145"/></svg></a>
-        <p>Irreverent elegance with a taste for mischief.</p>
+    <form id="form" novalidate>
+      <input type="hidden" name="source" value="collabs-page">
+      
+      <div class="grp">About you</div>
+      <div class="row2">
+        <div class="f"><label for="name">Your name</label><input id="name" name="name" required autocomplete="name"></div>
+        <div class="f"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
       </div>
-      <div class="f-col">
-        <h3>Visit</h3>
-        <p>94 Wimpole Street<br>Marylebone, London W1G 0EH</p>
-        <p><a href="tel:+442038790630">020 3879 0630</a></p>
-        <p><a href="https://maps.google.com/?q=Temper+Tantrums,+94+Wimpole+Street,+London+W1G+0EH" target="_blank" rel="noopener">Get directions &rarr;</a></p>
+      <div class="row2">
+        <div class="f"><label for="ig">Instagram handle</label><input id="ig" name="instagram" required placeholder="@"></div>
+        <div class="f"><label for="tt">TikTok handle <i>optional</i></label><input id="tt" name="tiktok" placeholder="@"></div>
       </div>
-      <div class="f-col">
-        <h3>Hours</h3>
-        <dl class="f-hours"><dt>Mon&ndash;Fri</dt><dd>8am &ndash; 11pm</dd><dt>Sat</dt><dd>8am &ndash; midnight</dd><dt>Sun</dt><dd>8am &ndash; 8pm</dd></dl>
-        <p style="margin-top:.6rem"><a href="/brunch/">Bottomless brunch, Sundays 12pm</a></p>
+      <div class="f"><label for="followers">Followers on your main platform</label>
+        <select id="followers" name="followers"><option>Under 10k</option><option selected>10k–25k</option><option>25k–50k</option><option>50k–100k</option><option>100k+</option></select>
       </div>
-      <div class="f-col f-signup">
-        <h3>Stay in the loop</h3>
-        <form data-signup="footer" novalidate>
-          <label class="sr-only" for="f-email">Email address</label>
-          <input id="f-email" type="email" name="email" inputmode="email" autocomplete="email" placeholder="Your email for news &amp; mischief" required>
-          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
-          <button type="submit">Join</button>
-        </form>
-        <p class="thanks">You&rsquo;re on the list. Mischief, incoming.</p>
-        <a class="ig" href="https://instagram.com/temper.tantrums.london" target="_blank" rel="noopener">@temper.tantrums.london</a>
+
+      <div class="grp">Your invitations</div>
+      <fieldset class="f">
+        <legend>Which would you like to request? <i>tick as many as you like</i></legend>
+        <div class="invites">
+        <div class="inv">
+          <input type="checkbox" id="i-tantrumsdine" name="invitations" value="tantrumsdine"><label for="i-tantrumsdine">Temper Tantrums · breakfast, lunch or dinner <span class="new" style="font-size:9px;letter-spacing:.2em;padding:3px 6px 2px;border-radius:2px;margin-left:4px">NEW</span></label>
+          <div class="dates" id="dates-tantrumsdine" hidden>
+            <div class="dl">Breakfast, lunch or dinner?</div>
+            <div class="f"><select id="tantrumsdine-service" name="tantrumsdine_service" aria-label="Temper Tantrums service"><option>Breakfast (any day)</option><option>Lunch (any day)</option><option>Dinner (Monday–Saturday)</option></select></div>
+            <div class="dl">Which date suits?</div>
+            <div class="row2">
+              <div class="f"><label for="tantrumsdine-d1">First choice date</label><select id="tantrumsdine-d1" name="tantrumsdine_date_1" class="pick"></select></div>
+              <div class="f"><label for="tantrumsdine-d2">Second choice <i>optional</i></label><select id="tantrumsdine-d2" name="tantrumsdine_date_2" class="pick"></select></div>
+            </div>
+            <div class="f"><label for="tantrumsdine-time">Preferred time</label><select id="tantrumsdine-time" name="tantrumsdine_time" class="tpick"></select></div>
+          </div>
+        </div>
+        <div class="inv">
+          <input type="checkbox" id="i-tantrumsbrunch" name="invitations" value="tantrumsbrunch"><label for="i-tantrumsbrunch">Bottomless brunch · Temper Tantrums <span class="new" style="font-size:9px;letter-spacing:.2em;padding:3px 6px 2px;border-radius:2px;margin-left:4px">NEW</span></label>
+          <div class="dates" id="dates-tantrumsbrunch" hidden>
+            <input type="hidden" name="tantrumsbrunch_service" value="Bottomless brunch">
+            <div class="dl">Which Sunday suits? Arrive any time from 12:00</div>
+            <div class="row2">
+              <div class="f"><label for="tantrumsbrunch-d1">First choice date</label><select id="tantrumsbrunch-d1" name="tantrumsbrunch_date_1" class="pick"></select></div>
+              <div class="f"><label for="tantrumsbrunch-d2">Second choice <i>optional</i></label><select id="tantrumsbrunch-d2" name="tantrumsbrunch_date_2" class="pick"></select></div>
+            </div>
+            <div class="f"><label for="tantrumsbrunch-time">Preferred time</label><select id="tantrumsbrunch-time" name="tantrumsbrunch_time" class="tpick"></select></div>
+          </div>
+        </div>
+        <div class="inv">
+          <input type="checkbox" id="i-temper" name="invitations" value="temper"><label for="i-temper">Bottomless brunch · Temper City or Soho</label>
+          <div class="dates" id="dates-temper" hidden>
+            <div class="dl">Which Temper?</div>
+            <div class="f"><select id="temper-location" name="temper_location" aria-label="Temper location"><option value="City">City — lobster &amp; steak brunch</option><option value="Soho">Soho — steak, tacos &amp; burgers (no lobster)</option></select><small id="temper-loc-note" style="display:block;margin-top:6px;color:var(--ink-3);font-size:12px"></small></div>
+            <div class="dl">Which Saturday suits?</div>
+            <div class="row2">
+              <div class="f"><label for="temper-d1">First choice date</label><select id="temper-d1" name="temper_date_1" class="pick"></select></div>
+              <div class="f"><label for="temper-d2">Second choice <i>optional</i></label><select id="temper-d2" name="temper_date_2" class="pick"></select></div>
+            </div>
+            <div class="f"><label for="temper-time">Preferred time</label><select id="temper-time" name="temper_time" class="tpick"></select></div>
+          </div>
+        </div>
+        <div class="inv">
+          <input type="checkbox" id="i-paradiso" name="invitations" value="paradiso"><label for="i-paradiso">Bottomless brunch · Paradiso</label>
+          <div class="dates" id="dates-paradiso" hidden>
+            <div class="dl">Which weekend date suits?</div>
+            <div class="row2">
+              <div class="f"><label for="paradiso-d1">First choice date</label><select id="paradiso-d1" name="paradiso_date_1" class="pick"></select></div>
+              <div class="f"><label for="paradiso-d2">Second choice <i>optional</i></label><select id="paradiso-d2" name="paradiso_date_2" class="pick"></select></div>
+            </div>
+            <div class="f"><label for="paradiso-time">Preferred time</label><select id="paradiso-time" name="paradiso_time" class="tpick"></select></div>
+          </div>
+        </div>
+        <div class="inv">
+          <input type="checkbox" id="i-brix" name="invitations" value="brix"><label for="i-brix">BRIX LDN · dinner, brunch or roast</label>
+          <div class="dates" id="dates-brix" hidden>
+            <div class="dl">Which would you like to experience?</div>
+            <div class="f"><select id="brix-service" name="brix_service" aria-label="BRIX experience"><option>Dinner (any evening)</option><option>Brunch (Saturdays &amp; Sundays)</option><option>Sunday roast (Sundays)</option></select></div>
+            <div class="dl">Which date suits?</div>
+            <div class="row2">
+              <div class="f"><label for="brix-d1">First choice date</label><select id="brix-d1" name="brix_date_1" class="pick"></select></div>
+              <div class="f"><label for="brix-d2">Second choice <i>optional</i></label><select id="brix-d2" name="brix_date_2" class="pick"></select></div>
+            </div>
+            <div class="f"><label for="brix-time">Preferred time</label><select id="brix-time" name="brix_time" class="tpick"></select></div>
+          </div>
+        </div>
+        <div class="inv">
+          <input type="checkbox" id="i-notto" name="invitations" value="notto"><label for="i-notto">Notto Piccadilly relaunch party · date TBC</label>
+        </div>
+        <div class="inv">
+          <input type="checkbox" id="i-nottodine" name="invitations" value="nottodine"><label for="i-nottodine">Notto · lunch or dinner, any day</label>
+          <div class="dates" id="dates-nottodine" hidden>
+            <div class="dl">Which restaurant?</div>
+            <div class="f"><select id="nottodine-location" name="nottodine_location" aria-label="Notto location"><option>Piccadilly</option><option>Covent Garden</option></select></div>
+            <div class="dl">Lunch or dinner?</div>
+            <div class="f"><select id="nottodine-service" name="nottodine_service" aria-label="Notto service"><option>Dinner</option><option>Lunch</option></select></div>
+            <div class="dl">Which date suits?</div>
+            <div class="row2">
+              <div class="f"><label for="nottodine-d1">First choice date</label><select id="nottodine-d1" name="nottodine_date_1" class="pick"></select></div>
+              <div class="f"><label for="nottodine-d2">Second choice <i>optional</i></label><select id="nottodine-d2" name="nottodine_date_2" class="pick"></select></div>
+            </div>
+            <div class="f"><label for="nottodine-time">Preferred time</label><select id="nottodine-time" name="nottodine_time" class="tpick"></select></div>
+          </div>
+        </div>
+        <div class="inv">
+          <input type="checkbox" id="i-kasakin" name="invitations" value="kasakin"><label for="i-kasakin">Kasa &amp; Kin · Filipino feast</label>
+          <div class="dates" id="dates-kasakin" hidden>
+            <div class="dl">Which date suits?</div>
+            <div class="row2">
+              <div class="f"><label for="kasakin-d1">First choice date</label><select id="kasakin-d1" name="kasakin_date_1" class="pick"></select></div>
+              <div class="f"><label for="kasakin-d2">Second choice <i>optional</i></label><select id="kasakin-d2" name="kasakin_date_2" class="pick"></select></div>
+            </div>
+            <div class="f"><label for="kasakin-time">Preferred time</label><select id="kasakin-time" name="kasakin_time" class="tpick"></select></div>
+          </div>
+        </div>
+        <div class="inv">
+          <input type="checkbox" id="i-centanni" name="invitations" value="centanni"><label for="i-centanni">Cent Anni · lunch, roast or dinner</label>
+          <div class="dates" id="dates-centanni" hidden>
+            <div class="dl">Which restaurant?</div>
+            <div class="f"><select id="centanni-location" name="centanni_location" aria-label="Cent Anni location"><option>St John's Wood</option><option>Wimbledon Village</option></select></div>
+            <div class="dl">Which would you like to experience?</div>
+            <div class="f"><select id="centanni-service" name="centanni_service" aria-label="Cent Anni experience"><option>Set lunch (Monday–Friday)</option><option>Sunday roast (Sundays, St John's Wood only)</option><option>Dinner (any evening)</option></select></div>
+            <div class="dl">Which date suits?</div>
+            <div class="row2">
+              <div class="f"><label for="centanni-d1">First choice date</label><select id="centanni-d1" name="centanni_date_1" class="pick"></select></div>
+              <div class="f"><label for="centanni-d2">Second choice <i>optional</i></label><select id="centanni-d2" name="centanni_date_2" class="pick"></select></div>
+            </div>
+            <div class="f"><label for="centanni-time">Preferred time</label><select id="centanni-time" name="centanni_time" class="tpick"></select></div>
+          </div>
+        </div>
+        </div>
+        <p class="sub">For each visit, give us a first-choice date and time (a second date helps if the first is full). Restaurant visits need at least a week's notice, so dates start from next week. The Notto relaunch has a new date coming, so just request it and we'll email you when it's set.</p>
+      </fieldset>
+
+      <div class="grp">Dietary</div>
+      <div class="f"><label for="diet">Any dietary requirements? <i>for you or your guest</i></label><input id="diet" name="dietary" placeholder="Allergies or anything the venue needs to know"></div>
+
+      <div class="grp">Content</div>
+      <fieldset class="f">
+        <legend>Reel or carousel?</legend>
+        <div class="chips">
+          <input type="radio" id="fmt-reel" name="format" value="Reel" checked><label for="fmt-reel">Reel</label>
+          <input type="radio" id="fmt-car" name="format" value="Carousel"><label for="fmt-car">Carousel</label>
+        </div>
+      </fieldset>
+      <fieldset class="f">
+        <legend>Anything extra you'd like to add? <i>optional</i></legend>
+        <div class="chips">
+          <input type="checkbox" id="c4" name="extras" value="TikTok"><label for="c4">TikTok</label>
+          <input type="checkbox" id="c5" name="extras" value="Google review"><label for="c5">Google review</label>
+          <input type="checkbox" id="c6" name="extras" value="Both reel and carousel"><label for="c6">Both reel and carousel</label>
+        </div>
+      </fieldset>
+      <div class="agree">
+        <input type="checkbox" id="agree" name="agree" value="yes" required>
+        <label for="agree">I'll deliver the four things for each visit: a reel or carousel (no copyrighted music), stories on the day, the venue added as collaborator, and a partnership ad code — all within 7 days. <a href="#deliverables" class="dl-link" id="agree-link">See the details</a>.</label>
       </div>
-    </div>
-    <div class="f-bottom">
-      <span>&copy; <span id="year">2026</span> Temper Tantrums &middot; From the team behind Temper</span>
-      <nav aria-label="Footer"><a href="/menu/">Menus</a><a href="/brunch/">Brunch</a><a href="/events/">Private hire</a><a href="/christmas/">Christmas</a><a href="/space/">The space</a><a href="/find-us/">Find us</a><a href="https://www.opentable.com/r/temper-tantrums-london" target="_blank" rel="noopener">Book a table</a></nav>
+      <div class="f"><label for="notes">Anything else?</label><textarea id="notes" name="notes" placeholder="Timings, ideas, collaboration pitches, dates to avoid or anything else we should know."></textarea></div>
+
+      <div class="err" id="err"><b>Something went wrong.</b> Please try again or email your details to <a href="mailto:hello@thewonder.group">hello@thewonder.group</a>.</div>
+      <div class="actions">
+        <button class="btn solid" type="submit" id="send">Request invitations</button>
+        <p class="hint">We'll review your requests and get back to you by email. Nothing is booked until you receive our confirmation email.</p>
+      </div>
+    </form>
+
+    <div class="done" id="done">
+      <img class="mark" src="mark.png" alt="">
+      <h3>You're on the list.</h3>
+      <p>Thanks — we've got your requests. We'll check with each venue and email you. Nothing is booked until you receive our confirmation.</p>
+      <button class="btn" id="again">Explore more invitations</button>
+      <p class="hint" style="margin-top:18px">Follow <a href="https://www.instagram.com/the.wonder.list/" target="_blank" rel="noopener" style="color:var(--gold-bright)">@the.wonder.list</a> for the next round of invitations.</p>
     </div>
   </div>
-</footer>
-<script src="/assets/tt.js" defer></script>
+</aside>
+
 <script>
-  // Hero video: desktop only (phones get the poster)
-  (function(){
-    var v = document.querySelector('.hero-video'); if (!v) return;
-    var saveData = navigator.connection && navigator.connection.saveData;
-    if (window.innerWidth > 760 && !saveData) {
-      var src = v.querySelector('source');
-      if (src && src.dataset.src) { src.src = src.dataset.src; v.load(); v.play().catch(function(){}); }
-    }
-  })();
-  // Time-of-day mood (visitor's clock). Preview with ?mood=morning|afternoon|evening
-  (function(){
-    var qs = new URLSearchParams(location.search).get('mood');
-    var now = new Date(), h = now.getHours(), day = now.getDay();
-    var mood = qs || (h >= 5 && h < 12 ? 'morning' : h >= 12 && h < 17 ? 'afternoon' : 'evening');
-    document.body.setAttribute('data-mood', mood);
-    var closes = day === 6 ? 'midnight' : day === 0 ? '8pm' : '11pm';
-    var open = (h >= 8) && !(day === 0 && h >= 20) && !(day !== 0 && day !== 6 && h >= 23);
-    var status = document.getElementById('mood-status');
-    if (status) {
-      var parts = [
-        {k:'morning', label:'Breakfast 8am'},
-        {k:'afternoon', label: day === 0 ? '<a href="/brunch/">Bottomless brunch 12pm</a>' : 'Lunch 12pm'},
-        {k:'evening', label:'Dinner 5pm'}
-      ].map(function(x){ return (x.k === mood && open) ? '<span style="color:#fff">' + x.label + ' &mdash; now</span>' : x.label; }).join(' &middot; ');
-      var tail = open ? 'open until ' + closes : (h < 8 ? 'doors open 8am' : 'see you tomorrow from 8am');
-      status.innerHTML = parts + ' &middot; ' + tail;
-    }
-    var p = document.getElementById('cta-primary'), s = document.getElementById('cta-secondary');
-    if (p && s && mood !== 'evening') {
-      p.textContent = 'View the menus'; p.href = mood === 'morning' ? '/menu/#cafe' : (day === 0 ? '/menu/#brunch' : '/menu/#lunch'); p.removeAttribute('target'); p.removeAttribute('rel');
-      s.textContent = 'Book a table'; s.href = 'https://www.opentable.com/r/temper-tantrums-london'; s.target = '_blank'; s.rel = 'noopener';
-    }
-    var words = {
-      morning: ['Coffee','Cornetti','Breakfast Bruschetta','Matcha Lattes','Fresh Pastries','A Taste for Mischief'],
-      afternoon: day === 0 ? ['Bottomless Brunch','Aperol Spritz','Prosecco','Margaritas','Pinsa Romana','A Taste for Mischief'] : ['Cicchetti','Pinsa Romana','Crostini','Long Lunches','Pasta','A Taste for Mischief'],
-      evening: ['Cocktails','Serious Wine','Playful Plates','Private Hire','Takeovers','A Taste for Mischief']
-    }[mood];
-    var t = document.getElementById('tick-track');
-    if (t) { var half = words.map(function(w){ return '<span>' + w + '</span><b>&amp;</b>'; }).join(''); t.innerHTML = half + half; }
-  })();
+/* ---- CONFIG ---------------------------------------------------------
+   Paste the Apps Script web-app URL here once deployed (see README).
+   Leave empty to test the page without sending anything.               */
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbwojo21pK1VoRPsxE4e-uTfgkSas2vIHH5XiOcU_2OkzXNiznS3nWopWYCXk18JnlbV/exec";
+/* -------------------------------------------------------------------- */
+
+const OPS = {
+  tantrumsdine:{title:"Temper Tantrums — breakfast, lunch or dinner", img:"img/tantrums.jpg"},
+  tantrumsbrunch:{title:"Bottomless brunch — Temper Tantrums", img:"img/tantrums-brunch.jpg"},
+  temper:  {title:"Bottomless brunch — Temper City or Soho", img:"img/temper.jpg"},
+  paradiso:{title:"Bottomless brunch — Paradiso", img:"img/paradiso.jpg"},
+  brix:    {title:"BRIX LDN — dinner, brunch or Sunday roast", img:"img/brix.jpg"},
+  notto:   {title:"Notto Piccadilly relaunch party", img:"img/notto.jpg"},
+  nottodine:{title:"Notto — lunch or dinner", img:"img/nottodine.jpg"},
+  kasakin: {title:"Kasa & Kin — Filipino feast", img:"img/kasakin.jpg"},
+  centanni:{title:"Cent Anni — set lunch, Sunday roast or dinner", img:"img/centanni.jpg"}
+};
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const sheet=$("#sheet"), scrim=$("#scrim"), form=$("#form"), done=$("#done"), err=$("#err");
+let lastFocus=null;
+
+function syncDates(){
+  for(const id of ["tantrumsdine","tantrumsbrunch","temper","paradiso","brix","kasakin","centanni","nottodine"]){
+    const on=$("#i-"+id).checked; $("#dates-"+id).hidden=!on;
+    $("#"+id+"-d1").required=on; $("#"+id+"-time").required=on;
+  }
+}
+$$(".invites input").forEach(c=>c.addEventListener("change",syncDates));
+
+function open(id){
+  lastFocus=document.activeElement;
+  const o=OPS[id]||OPS.tantrumsdine; id=OPS[id]?id:"tantrumsdine";
+  form.reset(); $("#i-"+id).checked=true; syncDates(); fillBrix(); fillCA(); fillND(); fillTT(); fillTemper();
+  $("#cover-img").src=o.img;
+  form.style.display=""; done.classList.remove("on"); err.classList.remove("on");
+  sheet.classList.add("on"); scrim.classList.add("on"); document.body.classList.add("locked");
+  sheet.scrollTop=0; setTimeout(()=>$("#name").focus(),420);
+}
+function close(){
+  sheet.classList.remove("on"); scrim.classList.remove("on"); document.body.classList.remove("locked");
+  if(lastFocus) lastFocus.focus();
+}
+$$("[data-op]").forEach(b=>b.addEventListener("click",()=>open(b.dataset.op)));
+/* date dropdowns: only the days each venue actually does */
+const ALL=[0,1,2,3,4,5,6];
+const DAYS={tantrumsbrunch:[0], tantrumsdine:{"Breakfast (any day)":ALL,"Lunch (any day)":ALL,"Dinner (Monday–Saturday)":[1,2,3,4,5,6]}, temper:[6], paradiso:[6,0], kasakin:ALL, nottodine:ALL, brix:{ "Dinner (any evening)":ALL, "Brunch (Saturdays & Sundays)":[6,0], "Sunday roast (Sundays)":[0] }, centanni:{ "Set lunch (Monday–Friday)":[1,2,3,4,5], "Sunday roast (Sundays, St John's Wood only)":[0], "Dinner (any evening)":ALL }};
+/* restaurant visits need at least a week's notice; events are fixed dates so aren't affected */
+const MIN_NOTICE_DAYS=7;
+/* venues that can take bookings at short notice (days ahead); everyone else needs MIN_NOTICE_DAYS */
+const NOTICE={tantrumsbrunch:0};
+function upcoming(days,count,notice){
+  const out=[], d=new Date(); d.setDate(d.getDate()+(notice==null?MIN_NOTICE_DAYS:notice));
+  while(out.length<count){ if(days.includes(d.getDay())) out.push(new Date(d)); d.setDate(d.getDate()+1); if(out.length===0&&days.length===0) break; }
+  return out;
+}
+function fill(id,days){
+  const opts=upcoming(days, days.length>=7?21:8, NOTICE[id]);
+  const fmt=x=>x.toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short"});
+  const iso=x=>x.toISOString().slice(0,10);
+  for(const n of ["d1","d2"]){
+    const sel=$("#"+id+"-"+n), cur=sel.value;
+    sel.innerHTML='<option value="">'+(n==="d1"?"Choose a date":"None")+'</option>'+opts.map(x=>`<option value="${iso(x)}">${fmt(x)}</option>`).join("");
+    if([...sel.options].some(o=>o.value===cur)) sel.value=cur;
+  }
+}
+/* time slots per venue / service: [start hour, end hour], half-hour steps */
+const TIMES={tantrumsbrunch:[12,18,0.25], tantrumsdine:{"Breakfast (any day)":[8,11.5],"Lunch (any day)":[12,14.5],"Dinner (Monday–Saturday)":[17.5,21]}, temper:{City:[12,14.5],Soho:[12,14]}, paradiso:[12,14.5], kasakin:[12,21.5], nottodine:{Lunch:[12,14.5],Dinner:[17.5,21.5]},
+  brix:{"Dinner (any evening)":[17.5,21.5],"Brunch (Saturdays & Sundays)":[10,13],"Sunday roast (Sundays)":[12,17]},
+  centanni:{"Set lunch (Monday–Friday)":[12,14.5],"Sunday roast (Sundays, St John's Wood only)":[12,17],"Dinner (any evening)":[17.5,21.5]}};
+function fillTime(id,range){
+  const sel=$("#"+id+"-time"), cur=sel.value, out=[];
+  const step=range[2]||0.5;
+  for(let t=range[0]; t<=range[1]+1e-9; t+=step){ const h=Math.floor(t)%24, m=Math.round((t%1)*60); out.push(`${String(h).padStart(2,"0")}:${String(m).padStart(2,"0")}`); }
+  sel.innerHTML='<option value="">Choose a time</option>'+out.map(t=>`<option>${t}</option>`).join("");
+  if(out.includes(cur)) sel.value=cur;
+}
+fill("tantrumsbrunch",DAYS.tantrumsbrunch); fillTime("tantrumsbrunch",TIMES.tantrumsbrunch); fill("temper",DAYS.temper); fill("paradiso",DAYS.paradiso); fill("kasakin",DAYS.kasakin); fill("nottodine",DAYS.nottodine);
+fillTime("paradiso",TIMES.paradiso); fillTime("kasakin",TIMES.kasakin);
+const ndSel=$("#nottodine-service"); const fillND=()=>fillTime("nottodine",TIMES.nottodine[ndSel.value]||[12,21.5]); ndSel.addEventListener("change",fillND); fillND();
+/* Temper: City (lobster) or Soho */
+const tLoc=$("#temper-location");
+const TEMPER_NOTE={City:"Angel Court, by Bank · the lobster brunch: oysters, surf & turf and half a Cornish lobster · 12:00–16:00",Soho:"Broadwick Street · steak, tacos and smashed cheeseburgers · 12:00–15:30 · no lobster at Soho — choose City for the lobster brunch"};
+const fillTemper=()=>{ fillTime("temper",TIMES.temper[tLoc.value]||[12,14]); $("#temper-loc-note").textContent=TEMPER_NOTE[tLoc.value]||""; };
+tLoc.addEventListener("change",fillTemper); fillTemper();
+/* Temper Tantrums: lunch any day, dinner Mon–Sat */
+const ttSel=$("#tantrumsdine-service");
+const fillTT=()=>{ fill("tantrumsdine",DAYS.tantrumsdine[ttSel.value]||ALL); fillTime("tantrumsdine",TIMES.tantrumsdine[ttSel.value]||[12,21]); };
+ttSel.addEventListener("change",fillTT); fillTT();
+const brixSel=$("#brix-service");
+const fillBrix=()=>{ fill("brix",DAYS.brix[brixSel.value]||ALL); fillTime("brix",TIMES.brix[brixSel.value]||[12,21.5]); };
+brixSel.addEventListener("change",fillBrix); fillBrix();
+/* Cent Anni: roast is St John's Wood only */
+const caSel=$("#centanni-service"), caLoc=$("#centanni-location");
+const fillCA=()=>{
+  const roast=caSel.value.startsWith("Sunday roast");
+  if(roast) caLoc.value="St John's Wood";
+  caLoc.options[1].disabled=roast;
+  fill("centanni",DAYS.centanni[caSel.value]||ALL);
+  fillTime("centanni",TIMES.centanni[caSel.value]||[12,21.5]);
+};
+caSel.addEventListener("change",fillCA); fillCA();
+$("#close").addEventListener("click",close); scrim.addEventListener("click",close);
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"&&sheet.classList.contains("on")) close(); });
+$("#again").addEventListener("click",close);
+$("#agree-link").addEventListener("click",e=>{ e.preventDefault(); close(); setTimeout(()=>document.getElementById("deliverables").scrollIntoView({behavior:"smooth"}),300); });
+
+
+form.addEventListener("submit", async e=>{
+  e.preventDefault(); err.classList.remove("on");
+  const picked=$$(".invites input:checked").map(c=>c.value);
+  if(!picked.length){ $("#i-tantrumsdine").focus(); err.textContent="Please tick at least one invitation."; err.classList.add("on"); return; }
+  if(!form.reportValidity()) return;
+  const btn=$("#send"); btn.disabled=true; btn.textContent="Sending…";
+  const data=new FormData(form);
+  data.set("invitations", picked.join(","));
+  data.set("content", [data.get("format"), "Stories", "Collaborator tag", "Ad code"].concat(data.getAll("extras")).join(", "));
+  data.delete("extras"); data.delete("agree");
+  data.set("submitted_at", new Date().toISOString());
+  data.set("page", location.href);
+  try{
+    if(ENDPOINT){ await fetch(ENDPOINT,{method:"POST",mode:"no-cors",body:new URLSearchParams(data)}); }
+    else{ await new Promise(r=>setTimeout(r,600)); console.log("[Wonder Collabs] no ENDPOINT set — would have sent:", Object.fromEntries(data)); }
+    form.style.display="none"; done.classList.add("on"); sheet.scrollTop=0;
+  }catch(x){ err.innerHTML='<b>Something went wrong.</b> Please try again or email your details to <a href="mailto:hello@thewonder.group">hello@thewonder.group</a>.'; err.classList.add("on"); }
+  finally{ btn.disabled=false; btn.textContent="Request invitations"; }
+});
+
+/* deep link from the email: ?op=brix scrolls to that invitation (the button then opens the form with it pre-ticked) */
+const q=new URLSearchParams(location.search).get("op");
+syncDates();
+if(q && OPS[q]){ const el=document.getElementById(q); if(el) setTimeout(()=>el.scrollIntoView({behavior:"smooth",block:"start"}),150); }
 </script>
 </body>
 </html>
