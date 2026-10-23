@@ -363,7 +363,7 @@ body.tabbed section.menu.active{display:block;animation:fadein .6s var(--ease)}
 .m-title{text-align:center;margin-bottom:3rem}
 .m-title h1,.m-title h2{font-size:clamp(2.4rem,1.6rem + 3vw,4rem);color:var(--green)}
 .m-title p{font-style:italic;color:var(--gold);margin-top:.6rem;font-size:1.15rem}
-.m-title::after{content:"";display:block;width:180px;aspect-ratio:202/27;margin:1.6rem auto 0;background:var(--gold);-webkit-mask:url(/assets/flourish.svg) center/contain no-repeat;mask:url(/assets/flourish.svg) center/contain no-repeat}
+.m-title::after{content:"";display:block;width:180px;aspect-ratio:202/27;margin:1.6rem auto 0;background:var(--gold);-webkit-mask:url(flourish.svg) center/contain no-repeat;mask:url(flourish.svg) center/contain no-repeat}
 .cols{columns:2;column-gap:clamp(3rem,7vw,6rem)}
 @media (max-width:760px){.cols{columns:1}}
 .grp{break-inside:avoid;margin-bottom:2.6rem}
@@ -419,3 +419,14 @@ body.tabbed section.menu.active{display:block;animation:fadein .6s var(--ease)}
 .polaroid{transition:transform .6s var(--ease),rotate .6s var(--ease),box-shadow .6s,opacity 1s var(--ease)}
 .polaroid:hover{rotate:0deg;transform:translateY(-6px) scale(1.02)!important}
 .icon-t.bg-t{position:absolute;z-index:0;width:min(46vw,420px);right:-6%;bottom:-18%;color:rgba(255,255,255,.06);pointer-events:none}
+/* private hire capacity */
+.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:clamp(3.5rem,7vw,5rem)}
+.cap{background:var(--white);padding:2.2rem 1.5rem;text-align:center;box-shadow:0 20px 40px rgba(20,28,22,.07)}
+.cap .eyebrow{margin-bottom:.6rem}
+.cap b{display:block;font-family:var(--f-display);font-weight:500;font-size:clamp(3.4rem,2.6rem + 3vw,5rem);line-height:1;color:var(--green)}
+.cap b em{font-style:italic;font-weight:400;color:var(--pink);font-size:.62em}
+.cap-l{display:block;font-family:var(--f-ui);font-size:.88rem;color:rgba(57,85,66,.75);margin-top:.5rem}
+.cap.alt{background:var(--green-deep)}.cap.alt .cap-l{color:rgba(255,255,255,.8)}
+@media (max-width:700px){.cap-grid{grid-template-columns:1fr 1fr}.cap.alt{grid-column:1/-1}}
+.hire-head .chips{margin:1.6rem 0 0}
+a[href^="tel:"]{white-space:nowrap}
