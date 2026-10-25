@@ -35,8 +35,7 @@
 "geo":{"@type":"GeoCoordinates","latitude":51.5204,"longitude":-0.1484},
  "openingHoursSpecification":[
  {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"23:00"},
- {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"11:00","closes":"00:00"},
- {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"08:00","closes":"20:00"}],
+ {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"11:00","closes":"00:00"}],
 "priceRange":"££","currenciesAccepted":"GBP",
 "acceptsReservations":"https://www.opentable.com/r/temper-tantrums-london",
 "menu":"https://tempertantrums.co.uk/menu/",
@@ -65,7 +64,7 @@
 <div class="drawer" id="drawer">
   <ul><li><a href="./">Home</a></li><li><a href="menu/">Menus</a></li><li><a href="brunch/">Brunch</a></li><li><a href="events/">Private Hire</a></li><li><a href="christmas/">Christmas</a></li><li><a href="space/">The Space</a></li><li><a href="find-us/">Find Us</a></li></ul>
   <svg class="flourish" viewBox="0 0 202 27" aria-hidden="true" focusable="false"><use href="#flourish" width="202" height="27"/></svg>
-  <div class="drawer-meta">94 Wimpole Street, Marylebone<br>Mon&ndash;Fri 10am&ndash;11pm &middot; Sat 11am&ndash;midnight &middot; Sun 8am&ndash;8pm<br><a href="tel:+442038790630">020 3879 0630</a> &middot; <a href="https://instagram.com/temper.tantrums.london" target="_blank" rel="noopener">@temper.tantrums.london</a></div>
+  <div class="drawer-meta">94 Wimpole Street, Marylebone<br>Mon&ndash;Fri 10am&ndash;11pm &middot; Sat 11am&ndash;midnight &middot; Sun closed<br><a href="tel:+442038790630">020 3879 0630</a> &middot; <a href="https://instagram.com/temper.tantrums.london" target="_blank" rel="noopener">@temper.tantrums.london</a></div>
 </div>
 <main id="main">
 <section class="hero grain" id="top">
@@ -219,7 +218,7 @@
       </div>
       <div class="f-col">
         <h3>Hours</h3>
-        <dl class="f-hours"><dt>Mon&ndash;Fri</dt><dd>10am &ndash; 11pm</dd><dt>Sat</dt><dd>11am &ndash; midnight</dd><dt>Sun</dt><dd>8am &ndash; 8pm</dd></dl>
+        <dl class="f-hours"><dt>Mon&ndash;Fri</dt><dd>10am &ndash; 11pm</dd><dt>Sat</dt><dd>11am &ndash; midnight</dd><dt>Sun</dt><dd>Closed</dd></dl>
         <p style="margin-top:.6rem"><a href="brunch/">Bottomless brunch, Saturdays 12pm</a></p>
       </div>
       <div class="f-col f-signup">
@@ -257,10 +256,10 @@
     var now = new Date(), h = now.getHours(), day = now.getDay();
     var mood = qs || (h >= 5 && h < 12 ? 'morning' : h >= 12 && h < 17 ? 'afternoon' : 'evening');
     document.body.setAttribute('data-mood', mood);
-    var closes = day === 6 ? 'midnight' : day === 0 ? '8pm' : '11pm';
-    function opensAt(d){ return d === 0 ? 8 : d === 6 ? 11 : 10; } // Sun 8am, Sat 11am, Mon-Fri 10am
+    var closes = day === 6 ? 'midnight' : '11pm';
+    function opensAt(d){ return d === 6 ? 11 : 10; } // Sat 11am, Mon-Fri 10am, closed Sundays
     var openH = opensAt(day);
-    var open = (h >= openH) && !(day === 0 && h >= 20) && !(day !== 0 && day !== 6 && h >= 23);
+    var open = day !== 0 && (h >= openH) && !(day !== 6 && h >= 23);
     var status = document.getElementById('mood-status');
     if (status) {
       var parts = [
@@ -268,8 +267,8 @@
         {k:'afternoon', label: day === 6 ? '<a href="brunch/">Bottomless brunch 12pm</a>' : 'Lunch 12pm'},
         {k:'evening', label:'Dinner 5pm'}
       ].map(function(x){ return (x.k === mood && open) ? '<span style="color:#fff">' + x.label + ' &mdash; now</span>' : x.label; }).join(' &middot; ');
-      var tail = open ? 'open until ' + closes : (h < openH ? 'doors open ' + openH + 'am' : 'see you tomorrow from ' + opensAt((day + 1) % 7) + 'am');
-      status.innerHTML = parts + ' &middot; ' + tail;
+      var tail = open ? 'open until ' + closes : (h < openH ? 'doors open ' + openH + 'am' : (day === 6 ? 'see you Monday from 10am' : 'see you tomorrow from ' + opensAt((day + 1) % 7) + 'am'));
+      status.innerHTML = day === 0 ? 'Closed on Sundays &middot; back Monday from 10am' : parts + ' &middot; ' + tail;
     }
     var p = document.getElementById('cta-primary'), s = document.getElementById('cta-secondary');
     if (p && s && mood !== 'evening') {
