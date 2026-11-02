@@ -443,3 +443,8 @@ a[href^="tel:"]{white-space:nowrap}
 .wp-head span{width:3.1rem;text-align:right;font-family:var(--f-head);font-weight:600;font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(57,85,66,.6)}
 .sub-h{font-family:var(--f-head);font-weight:600;font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(57,85,66,.6);margin:1rem 0 .6rem}
 @media (max-width:420px){.wp{grid-template-columns:repeat(3,2.6rem)}.wp-head span{width:2.6rem}}
+
+/* site credit */
+.f-credit{text-align:center;margin-top:1.6rem;font-family:"Julius Sans One",var(--f-ui);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase}
+.f-credit a{color:rgba(255,255,255,.75);text-decoration:none;transition:color .2s}
+.f-credit a:hover{color:var(--green-deep)}
