@@ -4,7 +4,7 @@
 
 ## Pages
 - [Home](https://tempertantrums.co.uk/): overview, café by day / wine & cocktails by night
-- [Menus](https://tempertantrums.co.uk/menu/): full café, lunch cicchetti and dinner menus with prices
+- [Menus](https://tempertantrums.co.uk/menu/): lunch cicchetti, dinner, drinks list (cocktails, spritzes, mocktails, beer, spirits, full wine list) and café menus with prices
 - [Saturday Bottomless Brunch](https://tempertantrums.co.uk/brunch/): every Saturday from 12pm, three courses + 90 minutes bottomless drinks, £40pp
 - [Private Hire & Events](https://tempertantrums.co.uk/events/): venue hire enquiries for birthdays, launches and parties
 - [The Space](https://tempertantrums.co.uk/space/): the interior — chandeliers, collected mirrors, rock and roll portraits
@@ -25,4 +25,5 @@ Temper Tantrums takes private parties, corporate events, birthdays, launches and
 - Cuisine: Italian with Asian accents; notable dishes include pinsa romana, cicchetti, crostini, pasta (tagliatelle, penne, spaghetti bolognese), salumi and formaggio platters
 - Opening hours: Mon-Fri 12pm-11pm; Sat 12pm-midnight; closed Sundays. Lunch from 12pm, dinner from 5pm; bottomless brunch Saturdays from 12pm; breakfast is paused for winter and returns in spring
 - Reservations: https://www.opentable.com/r/temper-tantrums-london (OpenTable); walk-ins also welcome
+- Drinks: classic cocktails £10–£15, spritzes from £12.50, alcohol-free mocktails £10.50, wines by the glass from £6.50 and by the bottle from £36, with orange wines and chilled reds
 - Price range: ££

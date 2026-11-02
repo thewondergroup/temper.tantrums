@@ -430,3 +430,16 @@ body.tabbed section.menu.active{display:block;animation:fadein .6s var(--ease)}
 @media (max-width:700px){.cap-grid{grid-template-columns:1fr 1fr}.cap.alt{grid-column:1/-1}}
 .hire-head .chips{margin:1.6rem 0 0}
 a[href^="tel:"]{white-space:nowrap}
+
+/* drinks list */
+.d-strip{width:min(1180px,calc(100% - 3rem));margin:0 auto 3rem;display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem}
+.d-strip img{width:100%;aspect-ratio:4/5;object-fit:cover}
+@media (max-width:600px){.d-strip{grid-template-columns:repeat(2,1fr)}}
+.it b small{display:block;font-family:var(--f-ui);font-weight:400;font-size:.78rem;letter-spacing:.02em;color:rgba(57,85,66,.65);margin-top:.15rem}
+.it.w{align-items:flex-start}
+.wp{display:inline-grid;grid-template-columns:repeat(3,3.1rem);text-align:right;flex:none}
+.wp i{font-style:normal}
+.wp-head{display:flex;justify-content:flex-end;margin:-.4rem 0 .9rem}
+.wp-head span{width:3.1rem;text-align:right;font-family:var(--f-head);font-weight:600;font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(57,85,66,.6)}
+.sub-h{font-family:var(--f-head);font-weight:600;font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(57,85,66,.6);margin:1rem 0 .6rem}
+@media (max-width:420px){.wp{grid-template-columns:repeat(3,2.6rem)}.wp-head span{width:2.6rem}}
